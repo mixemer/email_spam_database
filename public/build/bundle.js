@@ -42,6 +42,9 @@ var app = (function () {
     function text(data) {
         return document.createTextNode(data);
     }
+    function space() {
+        return text(' ');
+    }
     function attr(node, attribute, value) {
         if (value == null)
             node.removeAttribute(attribute);
@@ -338,32 +341,41 @@ var app = (function () {
 
     function create_fragment(ctx) {
     	let main;
-    	let h1;
+    	let h10;
     	let t0;
     	let t1;
     	let t2;
+    	let t3;
+    	let h11;
 
     	const block = {
     		c: function create() {
     			main = element("main");
-    			h1 = element("h1");
+    			h10 = element("h1");
     			t0 = text("Hello ");
     			t1 = text(/*name*/ ctx[0]);
     			t2 = text("!");
-    			attr_dev(h1, "class", "svelte-1tky8bj");
-    			add_location(h1, file, 5, 1, 46);
+    			t3 = space();
+    			h11 = element("h1");
+    			h11.textContent = "New change - Cesar";
+    			attr_dev(h10, "class", "svelte-1tky8bj");
+    			add_location(h10, file, 5, 1, 51);
+    			attr_dev(h11, "class", "svelte-1tky8bj");
+    			add_location(h11, file, 6, 1, 76);
     			attr_dev(main, "class", "svelte-1tky8bj");
-    			add_location(main, file, 4, 0, 38);
+    			add_location(main, file, 4, 0, 42);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
-    			append_dev(main, h1);
-    			append_dev(h1, t0);
-    			append_dev(h1, t1);
-    			append_dev(h1, t2);
+    			append_dev(main, h10);
+    			append_dev(h10, t0);
+    			append_dev(h10, t1);
+    			append_dev(h10, t2);
+    			append_dev(main, t3);
+    			append_dev(main, h11);
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*name*/ 1) set_data_dev(t1, /*name*/ ctx[0]);
