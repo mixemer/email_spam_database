@@ -2,16 +2,15 @@
     import { data } from "./dummy_data";
 
     const shown_rows = 10;
-    $: current_page = 2;
-    $: max_page_count = results.length / shown_rows + 1;
+    $: current_page = search_email.trim() === '' ? 1 : 1;
+    $: max_page_count = Math.round(filtered_data.length / shown_rows);
     export let search_email = '';
-    // 0-2, 2-4
-	
-	$: results = data.filter(thing => thing.email.toLowerCase().startsWith(search_email.trim().toLowerCase()))
-        .slice((current_page - 1) * shown_rows, current_page * shown_rows);
-    
-	const column_names = ["#", "Email", "Type of Scam", "Number of Reports", "First Occurance", "Comments"]
 
+	
+    $: filtered_data = data.filter(thing => thing.email.toLowerCase().startsWith(search_email.trim().toLowerCase()));
+	$: results = filtered_data.slice((current_page - 1) * shown_rows, current_page * shown_rows);
+
+	const column_names = ["#", "Email", "Type of Scam", "Number of Reports", "First Occurance", "Comments"]
 
     function clickedPrevious() {
         if (current_page == 1) return;
@@ -51,12 +50,13 @@
             {/each}
         </tbody>
       </table>
+
       <nav aria-label="Page navigation example">
         <ul class="pagination pagination-sm">
             <li class="page-item {current_page == 1 ? 'disabled' : ''}"><a class="page-link" href="#"
                  on:click={() => clickedPrevious()}>Previous</a></li>
-
-            {#each Array(max_page_count) as _, i}
+            
+            {#each Array((max_page_count)) as _, i}
                 <li class="page-item {i+1 == current_page ? 'active' : ''}"><a class="page-link" href="#" 
                     on:click={() => clickedOnPage(i+1)}>{i+1}</a></li>
             {/each}

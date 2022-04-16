@@ -17,7 +17,5 @@ export const data = [
     { id: 15, email: 'barjam@aol.com', type_of_scam: "Quiz", report_count: "100", first: "2005", comments: "100" },
     { id: 16, email: 'itstatus@gmail.com', type_of_scam: "Hidden URL", report_count: "100", first: "2005", comments: "100" },
     { id: 17, email: 'padme@icloud.com', type_of_scam: "PayPal", report_count: "100", first: "2005", comments: "100" },
-    { id: 18, email: 'intlprog@gmail.com', type_of_scam: "Mystery Shopper", report_count: "100", first: "2005", comments: "100" },
-    { id: 19, email: 'nasarius@gmail.com', type_of_scam: "Quiz", report_count: "100", first: "2005", comments: "100" },
-    { id: 20, email: 'noneme@sbcglobal.net', type_of_scam: "Hidden URL", report_count: "100", first: "2005", comments: "100" }
+    { id: 18, email: 'intlprog@gmail.com', type_of_scam: "Mystery Shopper", report_count: "100", first: "2005", comments: "100" }
 ];
