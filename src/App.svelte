@@ -9,6 +9,6 @@
 	<Header bind:search_email={search_email} />
 
 	<br>
-	
+
 	<TableDataBase bind:search_email={search_email} />
 </main>
