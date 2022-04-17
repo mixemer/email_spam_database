@@ -1,18 +1,18 @@
 <script>
-	// import router from "page"
-	// import { router_names } from "./globals"
+	import router from "page"
+	import { router_names } from "./globals"
 
-	// import Home from "./Home.svelte"
-	// import Report from "./Report.svelte"
-	// import FAQs from "./FAQs.svelte"
+	import Home from "./Home.svelte"
+	import Report from "./Report.svelte"
+	import FAQs from "./FAQs.svelte"
 
-	// let page
+	let page
 
-	// router('/', () => page = Home)
-	// router('/'+router_names.report, () => page = Report)
-	// router('/'+router_names.FAQs, () => page = FAQs)
+	router('/', () => page = Home)
+	router('/'+router_names.report, () => page = Report)
+	router('/'+router_names.FAQs, () => page = FAQs)
 
-	// router.start()
+	router.start()
 </script>
-<h>test</h>
-<!-- <svelte:component this={page} /> -->
+
+<svelte:component this={page} />
