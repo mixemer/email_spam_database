@@ -594,11 +594,12 @@ var app = (function () {
     			attr_dev(input, "class", "form-control me-2");
     			attr_dev(input, "type", "search");
     			attr_dev(input, "placeholder", "Search Email");
+    			input.autofocus = true;
     			attr_dev(input, "aria-label", "Search");
     			add_location(input, file$2, 34, 4, 994);
     			attr_dev(button1, "class", "btn btn-outline-success");
     			attr_dev(button1, "type", "submit");
-    			add_location(button1, file$2, 35, 4, 1120);
+    			add_location(button1, file$2, 35, 4, 1130);
     			attr_dev(form, "class", "d-flex");
     			add_location(form, file$2, 33, 2, 967);
     			attr_dev(div2, "class", "container-fluid");
@@ -635,6 +636,7 @@ var app = (function () {
     			set_input_value(input, /*search_email*/ ctx[0]);
     			append_dev(form, t9);
     			append_dev(form, button1);
+    			input.focus();
 
     			if (!mounted) {
     				dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[1]);

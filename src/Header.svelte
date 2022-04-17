@@ -32,7 +32,7 @@
 
 	  <div class="container-fluid">
 		<form class="d-flex">
-		  <input class="form-control me-2" type="search" placeholder="Search Email" aria-label="Search" bind:value={search_email}>
+		  <input class="form-control me-2" type="search" placeholder="Search Email" autofocus aria-label="Search" bind:value={search_email}>
 		  <button class="btn btn-outline-success" type="submit">Search</button>
 		</form>
 	  </div>
