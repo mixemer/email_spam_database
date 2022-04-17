@@ -1,8 +1,17 @@
 <script>
 	import { router_names } from "../globals"
+	import Toast from "./Toast.svelte"
     export let search_email = '';
 
 	export let current = "";
+
+	let onClick = () => {
+		if (search_email.trim() === "") {
+			var toastLiveExample = document.getElementById('liveToast')
+			var toast = new bootstrap.Toast(toastLiveExample)
+			toast.show()
+		}
+	}
 </script>
 
 <div class="header bg-light">
@@ -36,12 +45,16 @@
 		</div>
 	  </nav>
 
+
 	  <div class="container-fluid">
 		<form class="d-flex">
 		  <input class="form-control me-2" type="search" placeholder="Search Email" autofocus aria-label="Search" bind:value={search_email}>
-		  <button class="btn btn-outline-success" type="submit">Search</button>
+		  <button class="btn btn-outline-success" type="submit" id="liveToastBtn" on:click|preventDefault={onClick}>Search</button>
 		</form>
 	  </div>
+
+	  <!-- Toasts -->
+	  <Toast />
 </div>
 
 <style>
