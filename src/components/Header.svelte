@@ -35,7 +35,7 @@
 				
 				<li class="nav-item">
 					<Link class="nav-link {current === router_names.home ? 'active' : ''}" 
-					to="{router_names.home}" replace="{true}" state={{search: ''}} on:click={() => current = router_names.home}>Home</Link>
+					to="{router_names.home}" replace="{true}"  state={{search: ''}} on:click={() => current = router_names.home}>Home</Link>
 				  <!-- <a class="nav-link {current === router_names.home ? 'active' : ''}" 
 				  href="/{router_names.home}" on:click={() => current = router_names.home}>Home</a> -->
 				</li>

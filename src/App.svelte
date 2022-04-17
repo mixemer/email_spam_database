@@ -9,7 +9,7 @@
 
 	export let url = "/";
 
-	navigate("/"+router_names.home, {replace: true, state: {search: ""}});
+	// navigate("/"+router_names.home, {replace: true, state: {search: ""}});
 </script>
 
 <!-- <Home search_email={""} /> -->
