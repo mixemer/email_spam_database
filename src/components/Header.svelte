@@ -1,5 +1,7 @@
 <script>
+	import { navigate, Link } from "svelte-routing";
 	import { router_names } from "../globals"
+
 	import Toast from "./Toast.svelte"
     export let search_email = '';
 
@@ -10,6 +12,11 @@
 			var toastLiveExample = document.getElementById('liveToast')
 			var toast = new bootstrap.Toast(toastLiveExample)
 			toast.show()
+			return
+		} 
+
+		if (current !== router_names.home) {
+			navigate("/"+router_names.home, {replace: true, state: {search: search_email}});
 		}
 	}
 </script>
@@ -17,7 +24,7 @@
 <div class="header bg-light">
 	<nav class="navbar navbar-expand-lg navbar-light ">
 		<div class="container-fluid">
-		  <a class="navbar-brand fs-1 text-decoration-none" href="/" on:click={() => current = router_names.home}>Scam Email Finder </a>
+		  <a class="navbar-brand fs-1 text-decoration-none" href="/{router_names.home}" on:click={() => current = router_names.home}>Scam Email Finder </a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -27,18 +34,20 @@
 			<ul class="navbar-nav mb-2 mb-lg-0">
 				
 				<li class="nav-item">
-				  <a class="nav-link {current === router_names.home ? 'active' : ''}" 
-				  href="/" on:click={() => current = router_names.home}>Home</a>
+					<Link class="nav-link {current === router_names.home ? 'active' : ''}" 
+					to="{router_names.home}" replace="{true}" state={{search: ''}} on:click={() => current = router_names.home}>Home</Link>
+				  <!-- <a class="nav-link {current === router_names.home ? 'active' : ''}" 
+				  href="/{router_names.home}" on:click={() => current = router_names.home}>Home</a> -->
 				</li>
   
 				<li class="nav-item">
-				  <a class="nav-link {current === router_names.report ? 'active' : ''}" 
-				  href="/{router_names.report}" on:click={() => current = router_names.report}>Report</a>
+				  <Link class="nav-link {current === router_names.report ? 'active' : ''}" 
+				  to="{router_names.report}" on:click={() => current = router_names.report}>Report</Link>
 				</li>
 			   
 				<li class="nav-item d-flex">
-				  <a class="nav-link {current === router_names.FAQs ? 'active' : ''}" 
-				  href="/{router_names.FAQs}" on:click={() => current = router_names.FAQs}>FAQs</a>
+				  <Link class="nav-link {current === router_names.FAQs ? 'active' : ''}" 
+				  to="{router_names.FAQs}" on:click={() => current = router_names.FAQs}>FAQs</Link>
 				</li>
 			  </ul>
 			</div>
@@ -55,6 +64,8 @@
 
 	  <!-- Toasts -->
 	  <Toast />
+
+	  <br>
 </div>
 
 <style>

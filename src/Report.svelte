@@ -6,6 +6,8 @@
 
 <div>
 	<Header current="{router_names.report}"/>
+	<h1>Reports</h1>
+
 </div>
 
 <style>

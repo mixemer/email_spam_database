@@ -1,18 +1,21 @@
 <script>
-	import router from "page"
+  	import { Router, Link, Route } from "svelte-routing";
 	import { router_names } from "./globals"
 
 	import Home from "./Home.svelte"
 	import Report from "./Report.svelte"
 	import FAQs from "./FAQs.svelte"
+	import NotFound from "./NotFound.svelte";
 
-	let page = Home
-
-	router('/', () => page = Home)
-	router('/'+router_names.report, () => page = Report)
-	router('/'+router_names.FAQs, () => page = FAQs)
-
-	router.start()
+	export let url = router_names.home;
 </script>
 
-<svelte:component this={page} />
+<Router url="{url}">
+	<div>
+	  <Route path="{router_names.FAQs}" component="{FAQs}" />
+	  <Route path="{router_names.report}" component="{Report}" />
+	  <Route path="/" ><Home search_email={""} /></Route>
+
+	  <Route path="/*" component={NotFound} />
+	</div>
+  </Router>
