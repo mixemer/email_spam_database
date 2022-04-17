@@ -1,14 +1,18 @@
 <script>
-	import Header from "./Header.svelte";
-	import TableDataBase from "./TableDatabase.svelte";
+	import router from "page"
+	import { router_names } from "./globals"
 
-	let search_email = '';
+	import Home from "./Home.svelte"
+	import Report from "./Report.svelte"
+	import FAQs from "./FAQs.svelte"
+
+	let page
+
+	router('/', () => page = Home)
+	router('/'+router_names.report, () => page = Report)
+	router('/'+router_names.FAQs, () => page = FAQs)
+
+	router.start()
 </script>
 
-<main class="">
-	<Header bind:search_email={search_email} />
-
-	<br>
-
-	<TableDataBase bind:search_email={search_email} />
-</main>
+<svelte:component this={page} />

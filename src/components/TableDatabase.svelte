@@ -1,5 +1,5 @@
 <script>
-    import { data } from "./dummy_data";
+    import { data } from "../dummy_data";
 
     const shown_rows = 10;
     $: current_page = search_email.trim() === '' ? 1 : 1;

@@ -1,11 +1,14 @@
 <script>
+	import { router_names } from "../globals"
     export let search_email = '';
+
+	let current = ""
 </script>
 
 <div class="header bg-light">
 	<nav class="navbar navbar-expand-lg navbar-light ">
 		<div class="container-fluid">
-		  <a class="navbar-brand" href="/">Scam Email Finder </a>
+		  <a class="navbar-brand" href="/" on:click={() => current = router_names.home}>Scam Email Finder </a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -15,15 +18,15 @@
 			<ul class="navbar-nav mb-2 mb-lg-0">
 				
 				<li class="nav-item">
-				  <a class="nav-link active" href="/">Home</a>
+				  <a class="nav-link active" href="/" on:click={() => current = router_names.home}>Home</a>
 				</li>
   
 				<li class="nav-item">
-				  <a class="nav-link" href="#">Report</a>
+				  <a class="nav-link" href="/{router_names.report}" on:click={() => current = router_names.report}>Report</a>
 				</li>
 			   
 				<li class="nav-item d-flex">
-				  <a class="nav-link" href="#">FAQs</a>
+				  <a class="nav-link" href="/{router_names.FAQs}" on:click={() => current = router_names.FAQs}>FAQs</a>
 				</li>
 			  </ul>
 			</div>
