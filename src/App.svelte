@@ -6,7 +6,7 @@
 	import Report from "./Report.svelte"
 	import FAQs from "./FAQs.svelte"
 
-	let page
+	let page = Home
 
 	router('/', () => page = Home)
 	router('/'+router_names.report, () => page = Report)
@@ -15,6 +15,4 @@
 	router.start()
 </script>
 
-<Home/>
 <svelte:component this={page} />
-<p>Test</p>
