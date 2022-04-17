@@ -8,11 +8,11 @@
 
 	let page
 
-	// router('/', () => page = Home)
-	// router('/'+router_names.report, () => page = Report)
-	// router('/'+router_names.FAQs, () => page = FAQs)
+	router('/', () => page = Home)
+	router('/'+router_names.report, () => page = Report)
+	router('/'+router_names.FAQs, () => page = FAQs)
 
-	// router.start()
+	router.start()
 </script>
-<h1>test</h1>
+
 <svelte:component this={page} />
