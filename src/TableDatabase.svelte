@@ -26,7 +26,7 @@
     }
 </script>
 
-<div class="mx-5">
+<div class="body">
     <table class="table table-bordered table-hover table-striped">
         <thead>
           <tr>
@@ -68,10 +68,13 @@
 </div>
 
 <style>
-    /* div {
-        background-color: #2B6777;
+.body {
+    padding: 0 3rem;
+}
+@media (max-width: 978px) {
+    .body {
+      padding:0;
+      margin:0;
     }
-    th, td {
-        color: white;
-    } */
+}
 </style>

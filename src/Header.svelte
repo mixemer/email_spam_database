@@ -2,7 +2,7 @@
     export let search_email = '';
 </script>
 
-<div class="bg-light py-2 px-5">
+<div class="header bg-light">
 	<nav class="navbar navbar-expand-lg navbar-light ">
 		<div class="container-fluid">
 		  <a class="navbar-brand" href="/">Scam Email Finder </a>
@@ -41,5 +41,14 @@
 <style>
 .end-lined {
 	flex-grow: 0;
+}
+.header {
+    padding: 0 2rem;
+}
+@media (max-width: 978px) {
+    .header {
+      padding:0;
+      margin:0;
+    }
 }
 </style>
