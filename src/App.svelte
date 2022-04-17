@@ -15,5 +15,6 @@
 	router.start()
 </script>
 
+<Home/>
 <svelte:component this={page} />
 <p>Test</p>
