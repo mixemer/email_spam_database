@@ -2,7 +2,7 @@
 	import { router_names } from "../globals"
     export let search_email = '';
 
-	let current = ""
+	export let current = "";
 </script>
 
 <div class="header bg-light">
@@ -13,20 +13,23 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		  </button>
-
+		
 		  <div class="end-lined collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav mb-2 mb-lg-0">
 				
 				<li class="nav-item">
-				  <a class="nav-link active" href="/" on:click={() => current = router_names.home}>Home</a>
+				  <a class="nav-link {current === router_names.home ? 'active' : ''}" 
+				  href="/" on:click={() => current = router_names.home}>Home</a>
 				</li>
   
 				<li class="nav-item">
-				  <a class="nav-link" href="/{router_names.report}" on:click={() => current = router_names.report}>Report</a>
+				  <a class="nav-link {current === router_names.report ? 'active' : ''}" 
+				  href="/{router_names.report}" on:click={() => current = router_names.report}>Report</a>
 				</li>
 			   
 				<li class="nav-item d-flex">
-				  <a class="nav-link" href="/{router_names.FAQs}" on:click={() => current = router_names.FAQs}>FAQs</a>
+				  <a class="nav-link {current === router_names.FAQs ? 'active' : ''}" 
+				  href="/{router_names.FAQs}" on:click={() => current = router_names.FAQs}>FAQs</a>
 				</li>
 			  </ul>
 			</div>

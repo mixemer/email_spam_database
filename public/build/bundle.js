@@ -1760,14 +1760,18 @@ var app = (function () {
     	let ul;
     	let li0;
     	let a1;
+    	let t3;
+    	let a1_class_value;
     	let t4;
     	let li1;
     	let a2;
     	let t5;
+    	let a2_class_value;
     	let t6;
     	let li2;
     	let a3;
     	let t7;
+    	let a3_class_value;
     	let t8;
     	let div2;
     	let form;
@@ -1792,7 +1796,7 @@ var app = (function () {
     			ul = element("ul");
     			li0 = element("li");
     			a1 = element("a");
-    			a1.textContent = "Home";
+    			t3 = text("Home");
     			t4 = space();
     			li1 = element("li");
     			a2 = element("a");
@@ -1810,9 +1814,9 @@ var app = (function () {
     			button1.textContent = "Search";
     			attr_dev(a0, "class", "navbar-brand");
     			attr_dev(a0, "href", "/");
-    			add_location(a0, file$4, 10, 4, 245);
+    			add_location(a0, file$4, 10, 4, 253);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file$4, 13, 3, 542);
+    			add_location(span, file$4, 13, 3, 550);
     			attr_dev(button0, "class", "navbar-toggler");
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "data-bs-toggle", "collapse");
@@ -1820,46 +1824,50 @@ var app = (function () {
     			attr_dev(button0, "aria-controls", "navbarNav");
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
-    			add_location(button0, file$4, 12, 10, 359);
-    			attr_dev(a1, "class", "nav-link active");
+    			add_location(button0, file$4, 12, 10, 367);
+    			attr_dev(a1, "class", a1_class_value = "nav-link " + (/*current*/ ctx[1] === router_names.home ? 'active' : ''));
     			attr_dev(a1, "href", "/");
-    			add_location(a1, file$4, 20, 6, 751);
+    			add_location(a1, file$4, 20, 6, 761);
     			attr_dev(li0, "class", "nav-item");
-    			add_location(li0, file$4, 19, 4, 722);
-    			attr_dev(a2, "class", "nav-link");
+    			add_location(li0, file$4, 19, 4, 732);
+
+    			attr_dev(a2, "class", a2_class_value = "nav-link " + (/*current*/ ctx[1] === router_names.report
+    			? 'active'
+    			: ''));
+
     			attr_dev(a2, "href", "/" + router_names.report);
-    			add_location(a2, file$4, 24, 6, 890);
+    			add_location(a2, file$4, 25, 6, 949);
     			attr_dev(li1, "class", "nav-item");
-    			add_location(li1, file$4, 23, 4, 861);
-    			attr_dev(a3, "class", "nav-link");
+    			add_location(li1, file$4, 24, 4, 920);
+    			attr_dev(a3, "class", a3_class_value = "nav-link " + (/*current*/ ctx[1] === router_names.FAQs ? 'active' : ''));
     			attr_dev(a3, "href", "/" + router_names.FAQs);
-    			add_location(a3, file$4, 28, 6, 1058);
+    			add_location(a3, file$4, 30, 6, 1175);
     			attr_dev(li2, "class", "nav-item d-flex");
-    			add_location(li2, file$4, 27, 4, 1022);
+    			add_location(li2, file$4, 29, 4, 1139);
     			attr_dev(ul, "class", "navbar-nav mb-2 mb-lg-0");
-    			add_location(ul, file$4, 17, 3, 674);
+    			add_location(ul, file$4, 17, 3, 684);
     			attr_dev(div0, "class", "end-lined collapse navbar-collapse svelte-w7208t");
     			attr_dev(div0, "id", "navbarNav");
-    			add_location(div0, file$4, 16, 4, 606);
+    			add_location(div0, file$4, 16, 4, 616);
     			attr_dev(div1, "class", "container-fluid");
-    			add_location(div1, file$4, 9, 2, 210);
+    			add_location(div1, file$4, 9, 2, 218);
     			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-light ");
-    			add_location(nav, file$4, 8, 1, 155);
+    			add_location(nav, file$4, 8, 1, 163);
     			attr_dev(input, "class", "form-control me-2");
     			attr_dev(input, "type", "search");
     			attr_dev(input, "placeholder", "Search Email");
     			input.autofocus = true;
     			attr_dev(input, "aria-label", "Search");
-    			add_location(input, file$4, 37, 4, 1281);
+    			add_location(input, file$4, 40, 4, 1454);
     			attr_dev(button1, "class", "btn btn-outline-success");
     			attr_dev(button1, "type", "submit");
-    			add_location(button1, file$4, 38, 4, 1417);
+    			add_location(button1, file$4, 41, 4, 1590);
     			attr_dev(form, "class", "d-flex");
-    			add_location(form, file$4, 36, 2, 1254);
+    			add_location(form, file$4, 39, 2, 1427);
     			attr_dev(div2, "class", "container-fluid");
-    			add_location(div2, file$4, 35, 3, 1221);
+    			add_location(div2, file$4, 38, 3, 1394);
     			attr_dev(div3, "class", "header bg-light svelte-w7208t");
-    			add_location(div3, file$4, 7, 0, 123);
+    			add_location(div3, file$4, 7, 0, 131);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1877,6 +1885,7 @@ var app = (function () {
     			append_dev(div0, ul);
     			append_dev(ul, li0);
     			append_dev(li0, a1);
+    			append_dev(a1, t3);
     			append_dev(ul, t4);
     			append_dev(ul, li1);
     			append_dev(li1, a2);
@@ -1907,6 +1916,20 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
+    			if (dirty & /*current*/ 2 && a1_class_value !== (a1_class_value = "nav-link " + (/*current*/ ctx[1] === router_names.home ? 'active' : ''))) {
+    				attr_dev(a1, "class", a1_class_value);
+    			}
+
+    			if (dirty & /*current*/ 2 && a2_class_value !== (a2_class_value = "nav-link " + (/*current*/ ctx[1] === router_names.report
+    			? 'active'
+    			: ''))) {
+    				attr_dev(a2, "class", a2_class_value);
+    			}
+
+    			if (dirty & /*current*/ 2 && a3_class_value !== (a3_class_value = "nav-link " + (/*current*/ ctx[1] === router_names.FAQs ? 'active' : ''))) {
+    				attr_dev(a3, "class", a3_class_value);
+    			}
+
     			if (dirty & /*search_email*/ 1) {
     				set_input_value(input, /*search_email*/ ctx[0]);
     			}
@@ -1935,8 +1958,8 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Header', slots, []);
     	let { search_email = '' } = $$props;
-    	let current = "";
-    	const writable_props = ['search_email'];
+    	let { current = "" } = $$props;
+    	const writable_props = ['search_email', 'current'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Header> was created with unknown prop '${key}'`);
@@ -1954,6 +1977,7 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('search_email' in $$props) $$invalidate(0, search_email = $$props.search_email);
+    		if ('current' in $$props) $$invalidate(1, current = $$props.current);
     	};
 
     	$$self.$capture_state = () => ({ router_names, search_email, current });
@@ -1981,7 +2005,7 @@ var app = (function () {
     class Header extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { search_email: 0 });
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { search_email: 0, current: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1996,6 +2020,14 @@ var app = (function () {
     	}
 
     	set search_email(value) {
+    		throw new Error("<Header>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get current() {
+    		throw new Error("<Header>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set current(value) {
     		throw new Error("<Header>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -2798,13 +2830,17 @@ var app = (function () {
     	let div;
     	let header;
     	let current;
-    	header = new Header({ $$inline: true });
+
+    	header = new Header({
+    			props: { current: router_names.report },
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			create_component(header.$$.fragment);
-    			add_location(div, file$1, 5, 0, 77);
+    			add_location(div, file$1, 6, 0, 120);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2850,7 +2886,7 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Report> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Header });
+    	$$self.$capture_state = () => ({ router_names, Header });
     	return [];
     }
 
@@ -2875,13 +2911,17 @@ var app = (function () {
     	let div;
     	let header;
     	let current;
-    	header = new Header({ $$inline: true });
+
+    	header = new Header({
+    			props: { current: router_names.FAQs },
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			create_component(header.$$.fragment);
-    			add_location(div, file, 5, 0, 77);
+    			add_location(div, file, 6, 0, 120);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2927,7 +2967,7 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<FAQs> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Header });
+    	$$self.$capture_state = () => ({ router_names, Header });
     	return [];
     }
 

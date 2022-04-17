@@ -1,10 +1,11 @@
 <script>	
+	import { router_names } from "./globals"
 	import Header from "./components/Header.svelte";
 
 </script>
 
 <div >
-	<Header />
+	<Header current="{router_names.FAQs}" />
 </div>
 
 <style>
