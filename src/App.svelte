@@ -15,7 +15,6 @@
 	  <Route path="{router_names.FAQs}" component="{FAQs}" />
 	  <Route path="{router_names.report}" component="{Report}" />
 	  <Route path="/" ><Home search_email={""} /></Route>
-
 	  <!-- <Route path="/*" component={NotFound} /> -->
 	</div>
   </Router>
