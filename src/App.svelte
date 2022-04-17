@@ -7,7 +7,7 @@
 	import FAQs from "./FAQs.svelte"
 	import NotFound from "./NotFound.svelte";
 
-	export let url = router_names.home;
+	export let url = "/";
 </script>
 
 <Router url="{url}">
