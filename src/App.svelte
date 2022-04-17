@@ -16,3 +16,4 @@
 </script>
 
 <svelte:component this={page} />
+<p>Test</p>
