@@ -1767,10 +1767,8 @@ var app = (function () {
     	let div2;
     	let div1;
     	let div0;
-    	let i;
-    	let t0;
     	let strong;
-    	let t2;
+    	let t1;
     	let button;
 
     	const block = {
@@ -1778,21 +1776,17 @@ var app = (function () {
     			div2 = element("div");
     			div1 = element("div");
     			div0 = element("div");
-    			i = element("i");
-    			t0 = space();
     			strong = element("strong");
     			strong.textContent = "Seach Field Empty";
-    			t2 = space();
+    			t1 = space();
     			button = element("button");
-    			attr_dev(i, "class", "fa-solid fa-circle-exclamation px-2 text-danger");
-    			add_location(i, file$5, 3, 8, 209);
     			attr_dev(strong, "class", "me-auto");
-    			add_location(strong, file$5, 5, 8, 292);
+    			add_location(strong, file$5, 5, 8, 301);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "btn-close");
     			attr_dev(button, "data-bs-dismiss", "toast");
     			attr_dev(button, "aria-label", "Close");
-    			add_location(button, file$5, 7, 8, 397);
+    			add_location(button, file$5, 7, 8, 406);
     			attr_dev(div0, "class", "toast-header p-3");
     			add_location(div0, file$5, 2, 6, 169);
     			attr_dev(div1, "id", "liveToast");
@@ -1812,10 +1806,8 @@ var app = (function () {
     			insert_dev(target, div2, anchor);
     			append_dev(div2, div1);
     			append_dev(div1, div0);
-    			append_dev(div0, i);
-    			append_dev(div0, t0);
     			append_dev(div0, strong);
-    			append_dev(div0, t2);
+    			append_dev(div0, t1);
     			append_dev(div0, button);
     		},
     		p: noop,
