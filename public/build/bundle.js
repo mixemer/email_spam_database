@@ -1937,11 +1937,11 @@ var app = (function () {
     			button1.textContent = "Search";
     			t11 = space();
     			create_component(toast.$$.fragment);
-    			attr_dev(a0, "class", "navbar-brand");
+    			attr_dev(a0, "class", "navbar-brand fs-1 text-decoration-none");
     			attr_dev(a0, "href", "/");
     			add_location(a0, file$4, 19, 4, 497);
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file$4, 22, 3, 794);
+    			add_location(span, file$4, 22, 3, 820);
     			attr_dev(button0, "class", "navbar-toggler");
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "data-bs-toggle", "collapse");
@@ -1949,31 +1949,31 @@ var app = (function () {
     			attr_dev(button0, "aria-controls", "navbarNav");
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
-    			add_location(button0, file$4, 21, 10, 611);
+    			add_location(button0, file$4, 21, 10, 637);
     			attr_dev(a1, "class", a1_class_value = "nav-link " + (/*current*/ ctx[1] === router_names.home ? 'active' : ''));
     			attr_dev(a1, "href", "/");
-    			add_location(a1, file$4, 29, 6, 1005);
+    			add_location(a1, file$4, 29, 6, 1031);
     			attr_dev(li0, "class", "nav-item");
-    			add_location(li0, file$4, 28, 4, 976);
+    			add_location(li0, file$4, 28, 4, 1002);
 
     			attr_dev(a2, "class", a2_class_value = "nav-link " + (/*current*/ ctx[1] === router_names.report
     			? 'active'
     			: ''));
 
     			attr_dev(a2, "href", "/" + router_names.report);
-    			add_location(a2, file$4, 34, 6, 1193);
+    			add_location(a2, file$4, 34, 6, 1219);
     			attr_dev(li1, "class", "nav-item");
-    			add_location(li1, file$4, 33, 4, 1164);
+    			add_location(li1, file$4, 33, 4, 1190);
     			attr_dev(a3, "class", a3_class_value = "nav-link " + (/*current*/ ctx[1] === router_names.FAQs ? 'active' : ''));
     			attr_dev(a3, "href", "/" + router_names.FAQs);
-    			add_location(a3, file$4, 39, 6, 1419);
+    			add_location(a3, file$4, 39, 6, 1445);
     			attr_dev(li2, "class", "nav-item d-flex");
-    			add_location(li2, file$4, 38, 4, 1383);
+    			add_location(li2, file$4, 38, 4, 1409);
     			attr_dev(ul, "class", "navbar-nav mb-2 mb-lg-0");
-    			add_location(ul, file$4, 26, 3, 928);
+    			add_location(ul, file$4, 26, 3, 954);
     			attr_dev(div0, "class", "end-lined collapse navbar-collapse svelte-w7208t");
     			attr_dev(div0, "id", "navbarNav");
-    			add_location(div0, file$4, 25, 4, 860);
+    			add_location(div0, file$4, 25, 4, 886);
     			attr_dev(div1, "class", "container-fluid");
     			add_location(div1, file$4, 18, 2, 462);
     			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-light ");
@@ -1983,15 +1983,15 @@ var app = (function () {
     			attr_dev(input, "placeholder", "Search Email");
     			input.autofocus = true;
     			attr_dev(input, "aria-label", "Search");
-    			add_location(input, file$4, 50, 4, 1700);
+    			add_location(input, file$4, 50, 4, 1726);
     			attr_dev(button1, "class", "btn btn-outline-success");
     			attr_dev(button1, "type", "submit");
     			attr_dev(button1, "id", "liveToastBtn");
-    			add_location(button1, file$4, 51, 4, 1836);
+    			add_location(button1, file$4, 51, 4, 1862);
     			attr_dev(form, "class", "d-flex");
-    			add_location(form, file$4, 49, 2, 1673);
+    			add_location(form, file$4, 49, 2, 1699);
     			attr_dev(div2, "class", "container-fluid");
-    			add_location(div2, file$4, 48, 3, 1640);
+    			add_location(div2, file$4, 48, 3, 1666);
     			attr_dev(div3, "class", "header bg-light svelte-w7208t");
     			add_location(div3, file$4, 16, 0, 375);
     		},
