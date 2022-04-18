@@ -1,24 +1,73 @@
 <script>
+    import { data } from "../dummy_data";
 
+    let fields = { nameVar: '', email: '', scam_email: '', info: '', }
+    let errors = { nameVar: '', email: '', scam_email: '', info: '', }
+    let valid = false;
+
+    const submitHandler = () => {
+        valid = true;
+
+        //Name field
+        if (fields.nameVar.trim().length == 0) {
+            valid = false;
+            errors.nameVar = 'Name cannot be empty!';
+        } else {
+            errors.nameVar = '';
+        }
+
+        //Email field
+        if (fields.email.trim().length < 4) {
+            valid = false;
+            errors.email = 'Email must be at least 4 characters long!';
+        } else {
+            errors.email = '';
+        }
+
+        //Scam email field
+        if (fields.scam_email.trim().length < 4) {
+            valid = false;
+            errors.scam_email = 'Scam email must be at least 4 characters long!';
+        } else {
+            errors.scam_email = '';
+            console.log('test');
+        }
+
+        //Scam information field
+        if (errors.info.trim().length == 0) {
+            valid = false;
+            errors.info = 'Scam information field cannot be empty!'
+        } else {
+            errors.info = '';
+        }
+
+        if (valid) {
+            console.log('valid', fields);
+        }
+    }
 </script>
 
 <div class="body">
     <h1 id="header">Scam Email Ticket</h1>
-    <form id="input-area">
+    <form id="input-area" on:submit|preventDefault={submitHandler}>
         <p id="info">Your Information</p>
         <div id="name">Name:
-            <input type="text" id="name-input">
+            <input type="text" id="name-input" bind:value={fields.nameVar}>
         </div>
+        <div class="error">{ errors.nameVar }</div>
         <div id="email">Email:
-            <input type="text" id="email-input">
+            <input type="text" id="email-input" bind:value={fields.email}>
         </div>
+        <div class="error">{ errors.email }</div>
         <p id="scam-info">Scam Information:</p>
         <div id="scam-email">Scam Email:
-            <input type="text" id="scam-email-input">
+            <input type="text" id="scam-email-input" bind:value={fields.scam_email}>
         </div>
+        <div class="error">{ errors.scam_email }</div>
         <div id="event-info">Information about the event:
-            <textarea class="event-info-input"></textarea>
+            <textarea class="event-info-input" bind:value={fields.info}></textarea>
         </div>
+        <div class="error">{ errors.info }</div>
         <button class="btn btn-success" type="submit">Send</button>
     </form>
 </div>
@@ -47,6 +96,10 @@
     }
     #input-area {
         margin-top: 20px;
+    }
+    .error {
+        text-align: right;
+        margin-bottom: 20px;
     }
     #name {
         text-align: center;
