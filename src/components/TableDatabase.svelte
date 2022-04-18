@@ -51,18 +51,22 @@
         </tbody>
       </table>
 
+      {#if results.length === 0}
+          <h1 class="text-center"> No Email Found </h1>
+      {/if}
+
       <nav aria-label="Page navigation example">
         <ul class="pagination pagination-sm">
-            <li class="page-item {current_page == 1 ? 'disabled' : ''}"><a class="page-link" href="#"
-                 on:click={() => clickedPrevious()}>Previous</a></li>
+            <li class="page-item {current_page <= 1 ? 'disabled' : ''}"><span class="page-link"
+                 on:click={() => clickedPrevious()}>Previous</span></li>
             
             {#each Array((max_page_count)) as _, i}
-                <li class="page-item {i+1 == current_page ? 'active' : ''}"><a class="page-link" href="#" 
-                    on:click={() => clickedOnPage(i+1)}>{i+1}</a></li>
+                <li class="page-item {i+1 == current_page ? 'active' : ''}"><span class="page-link" 
+                    on:click={() => clickedOnPage(i+1)}>{i+1}</span></li>
             {/each}
 
-          <li class="page-item {current_page == max_page_count ? 'disabled' : ''}"><a class="page-link" href="#" 
-            on:click={() => clickedNext()}>Next</a></li>
+          <li class="page-item {current_page >= max_page_count ? 'disabled' : ''}"><span class="page-link" 
+            on:click={() => clickedNext()}>Next</span></li>
         </ul>
       </nav>
 </div>
@@ -76,5 +80,8 @@
       padding:0;
       margin:0;
     }
+}
+span {
+    cursor: pointer;
 }
 </style>
