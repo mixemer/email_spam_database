@@ -1,5 +1,7 @@
 <script>
+    import { navigate, Link } from "svelte-routing";
     import { data } from "../dummy_data";
+    import { router_names } from "../globals"
 
     const shown_rows = 10;
     $: current_page = search_email.trim() === '' ? 1 : 1;
@@ -24,6 +26,10 @@
         if (page_number < 1 || page_number > max_page_count) return;
         current_page = page_number
     }
+    function onClickEmail(id) {
+        console.log(id)
+        navigate("/"+router_names.email+"/"+id, {replace: false, state: {id: id}});
+    }
 </script>
 
 <div class="body">
@@ -39,7 +45,7 @@
 
         <tbody>
             {#each results as result (result.id)}
-                <tr>
+                <tr on:click={() => onClickEmail(result.id)}>
                     <td>{result.id}</td>
                     <td>{result.email}</td>
                     <td>{result.type_of_scam}</td>
@@ -81,7 +87,7 @@
       margin:0;
     }
 }
-span {
+span, tr {
     cursor: pointer;
 }
 </style>
