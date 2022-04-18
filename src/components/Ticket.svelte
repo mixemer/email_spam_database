@@ -30,21 +30,37 @@
             errors.scam_email = 'Scam email must be at least 4 characters long!';
         } else {
             errors.scam_email = '';
-            console.log('test');
         }
 
         //Scam information field
-        if (errors.info.trim().length == 0) {
-            valid = false;
-            errors.info = 'Scam information field cannot be empty!'
-        } else {
-            errors.info = '';
-        }
+        ///if (errors.info.trim().length == 0) {
+            //valid = false;
+            //errors.info = 'Scam information field cannot be empty!'
+        //} else {
+            //errors.info = '';
+        //}
 
         if (valid) {
-            console.log('valid', fields);
+            //console.log(fields);
+            submitFields();
         }
     }
+
+
+    function submitFields() {
+        for(let i = 0; i < data.length; i++) {
+            //If the scam email is already reported
+            if(fields.scam_email == data[i].email) {
+                data[i].report_count++;
+                console.log(data[i].report_count);
+                return;
+            }
+        }
+        //If the scam email is not reported
+        const newData = { id: (data.length + 1), email: fields.scam_email, type_of_scam: "PayPal", report_count: "1", first: "2022", comments: "0" };
+        data.push(newData);
+    }
+
 </script>
 
 <div class="body">
