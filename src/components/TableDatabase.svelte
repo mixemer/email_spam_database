@@ -52,6 +52,7 @@
                     <td>{result.report_count}</td>
                     <td>{result.first}</td>
                     <td>{result.comments}</td>
+                    <td> <i class="fa-solid fa-angle-right"></i> </td>
                 </tr>
             {/each}
         </tbody>
