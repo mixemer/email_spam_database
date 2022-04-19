@@ -1,9 +1,12 @@
 <script>
     import { data } from "../dummy_data";
+    import { scam_types } from "../globals";
 
     let fields = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     let errors = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     let valid = false;
+
+    //Reminder to edit button
 
     const submitHandler = () => {
         valid = true;
@@ -33,23 +36,14 @@
         }
 
         //Type of scam field
-        if (fields.type_of_scam.trim().length == 0) {
+        if (fields.type_of_scam.length == 0) {
             valid = false;
-            errors.type_of_scam = 'Type of scam cannot be empty!';
+            errors.type_of_scam = 'You must select a type of scam!';
         } else {
             errors.type_of_scam = '';
         }
 
-        //Scam information field
-        ///if (errors.info.trim().length == 0) {
-            //valid = false;
-            //errors.info = 'Scam information field cannot be empty!'
-        //} else {
-            //errors.info = '';
-        //}
-
         if (valid) {
-            //console.log(fields);
             submitFields();
         }
     }
@@ -58,14 +52,13 @@
     function submitFields() {
         for(let i = 0; i < data.length; i++) {
             //If the scam email is already reported
-            if(fields.scam_email == data[i].email) {
+            if(fields.scam_email == data[i].email && scam_types[fields.type_of_scam].scam_name == data[i].type_of_scam) {
                 data[i].report_count++;
-                console.log(data[i].report_count);
                 return;
             }
         }
         //If the scam email is not reported
-        const newData = { id: data.length + 1, email: fields.scam_email, type_of_scam: fields.type_of_scam, report_count: "1", first: "2022", comments: "0" };
+        const newData = { id: data.length + 1, email: fields.scam_email, type_of_scam: scam_types[fields.type_of_scam].scam_name, report_count: "1", first: "2022", comments: "0" };
         data.push(newData);
     }
 
@@ -89,13 +82,16 @@
         </div>
         <div class="error">{ errors.scam_email }</div>
         <div id="scam-type"> Scam type:
-            <input type="text" id="scam-type-input" bind:value={fields.type_of_scam}>
+            <div id="type-container">
+                <select bind:value={fields.type_of_scam} class="select-picker" aria-label="Default select example">
+                    <option selected>Pick the type of scam</option>
+                    {#each scam_types as { scam_name }, i}
+                        <option value="{i}">{scam_name}</option>
+                    {/each}
+                </select>
+            </div>
         </div>
         <div class="error">{ errors.type_of_scam }</div>
-        <div id="event-info">Information about the event:
-            <textarea class="event-info-input" bind:value={fields.info}></textarea>
-        </div>
-        <div class="error">{ errors.info }</div>
         <button class="btn btn-success" type="submit">Send</button>
     </form>
 </div>
@@ -156,10 +152,15 @@
         display: flex;
         justify-content: space-between;
     }
-    #scam-type-input {
+    #type-container {
         border-radius: 10px;
-        max-height: 20px;
-        min-width: 250px;
+        width: 250px;
+    }
+    .select-picker {
+        font-size: 15px;
+        border-radius: 10px;
+        max-height: 45px;
+        width: 250px;
     }
     #scam-info {
         margin-top: 50px;
@@ -176,17 +177,6 @@
     #scam-email-input {
         border-radius: 10px;
         max-height: 20px;
-        min-width: 250px;
-    }
-    #event-info {
-        margin-top: 15px;
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-    }
-    .event-info-input {
-        border-radius: 10px;
-        min-height: 125px;
         min-width: 250px;
     }
     .btn-success {

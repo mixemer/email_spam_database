@@ -93,4 +93,8 @@ export const scam_types = [
         scam_name:  "Fake Virus", 
         detail: "Email telling you that your computer has a virus when it may not."
     },
+    {
+        scam_name:  "Other", 
+        detail: ""
+    },
 ]
