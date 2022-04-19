@@ -1,3 +1,9 @@
+<script>
+    import { Link } from "svelte-routing";
+	import { router_names } from "./globals"
+
+</script>
+
 <h1 class="text-center">Page Not Found  </h1>
 
 <div class="center">
@@ -7,8 +13,8 @@
 </div>
 
 <div>
-    <button class="btn btn-success btn-lg" >
-        <a href="/" >Go Home</a>
+    <button class="a btn btn-success btn-lg" >
+        <Link to="{router_names.home}" ><div>Go Home</div></Link>
     </button>
 </div>
 
@@ -22,11 +28,11 @@ button {
     margin:0 auto;
     display:block;
 }
-a {
+div {
     color: white;
     text-decoration: none;
 }
-a:hover{
+.a:hover{
     text-decoration: none;
     color: inherit;
 }

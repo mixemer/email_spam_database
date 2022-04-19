@@ -24,7 +24,7 @@
 <div class="header bg-light">
 	<nav class="navbar navbar-expand-lg navbar-light ">
 		<div class="container-fluid">
-		  <a class="navbar-brand fs-1 text-decoration-none" href="/{router_names.home}" on:click={() => current = router_names.home}>Scam Email Finder </a>
+		  <Link class="navbar-brand fs-1 text-decoration-none" to="{router_names.home}" on:click={() => current = router_names.home}>Scam Email Finder </Link>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>

@@ -8,8 +8,9 @@
 	import Email from "./Email.svelte"
 	import NotFound from "./NotFound.svelte";
 
-	export let url = "/";
-
+	// TODO: make it "" later, for now "/" works for github pages
+	export let url = "";
+	console.log(window.location.href)
 </script>
 
 <Router url={url}>
@@ -23,6 +24,7 @@
 		<Home search_email={""} />
 	  </Route>
 
+	  <!-- TODO: github pages -->
 	  <Route component={NotFound} />
 	</div>
   </Router>
