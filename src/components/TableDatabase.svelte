@@ -9,10 +9,32 @@
     export let search_email = '';
 
 	
-    $: filtered_data = data.filter(thing => thing.email.toLowerCase().startsWith(search_email.trim().toLowerCase()));
+    $: filtered_data = data.filter(thing => thing.email.toLowerCase().startsWith(search_email.trim().toLowerCase())).sort(sort);
 	$: results = filtered_data.slice((current_page - 1) * shown_rows, current_page * shown_rows);
 
 	const column_names = ["#", "Email", "Type of Scam", "Number of Reports", "First Occurance", "Comments", ""]
+
+    const reportsIndex = 3
+    const firstIndex = 4
+    const commentsIndex = 5
+    let sortAsc = true;
+    let sortVal = reportsIndex;
+    function sort(a, b) {
+        if (sortVal == reportsIndex) { // report_count
+            return sortAsc ? a.report_count - b.report_count : b.report_count - a.report_count;
+        } else if (sortVal == firstIndex) { // first
+            return sortAsc ? a.first - b.first : b.first - a.first;
+        } else { // comments
+            return sortAsc ? a.comments - b.comments : b.comments - a.comments;
+        }
+    }
+
+    function onClickColumNames(index) {
+        if (index < reportsIndex || index > commentsIndex) return;
+        if (index == sortVal) sortAsc = !sortAsc
+        sortVal = index;
+        filtered_data = filtered_data.sort(sort)
+    }
 
     function clickedPrevious() {
         if (current_page == 1) return;
@@ -30,23 +52,33 @@
         console.log(id)
         navigate("/"+router_names.email+"/"+id, {replace: false, state: {id: id}});
     }
+    function isClickable(i) {
+        return i >= reportsIndex && i <=commentsIndex
+    }
 </script>
 
 <div class="body">
     <table class="table table-bordered table-hover table-striped">
         <thead>
           <tr>
-              {#each column_names as column}
-                  <th scope="col">{column}</th>
-              {/each}
-            
+              {#each column_names as column, i}
+                  <th class="{isClickable(i) ? "clickable" : ""}" on:click={() => onClickColumNames(i)} scope="col">{column} 
+                    {#if i == sortVal}
+                        {#if sortAsc}
+                            <i class="fa-solid fa-arrow-down"></i>
+                        {:else}
+                            <i class="fa-solid fa-arrow-up"></i>
+                        {/if}
+                    {/if}
+                </th>
+              {/each} 
           </tr>
         </thead>
 
         <tbody>
-            {#each results as result (result.id)}
-                <tr on:click={() => onClickEmail(result.id)}>
-                    <td>{result.id}</td>
+            {#each results as result, i}
+                <tr class="clickable" on:click={() => onClickEmail(result.id)}>
+                    <td>{i+1}</td>
                     <td>{result.email}</td>
                     <td>{result.type_of_scam}</td>
                     <td>{result.report_count}</td>
@@ -88,7 +120,10 @@
       margin:0;
     }
 }
-span, tr {
+span {
+    cursor: pointer;
+}
+.clickable {
     cursor: pointer;
 }
 </style>
