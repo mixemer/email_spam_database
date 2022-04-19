@@ -3744,7 +3744,7 @@ var app = (function () {
     const file$5 = "src\\components\\Ticket.svelte";
 
     function create_fragment$5(ctx) {
-    	let div8;
+    	let div10;
     	let h1;
     	let t1;
     	let form;
@@ -3778,19 +3778,27 @@ var app = (function () {
     	let t17;
     	let div6;
     	let t18;
-    	let textarea;
+    	let input3;
     	let t19;
     	let div7;
-    	let t20_value = /*errors*/ ctx[1].info + "";
+    	let t20_value = /*errors*/ ctx[1].type_of_scam + "";
     	let t20;
     	let t21;
+    	let div8;
+    	let t22;
+    	let textarea;
+    	let t23;
+    	let div9;
+    	let t24_value = /*errors*/ ctx[1].info + "";
+    	let t24;
+    	let t25;
     	let button;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			div8 = element("div");
+    			div10 = element("div");
     			h1 = element("h1");
     			h1.textContent = "Scam Email Ticket";
     			t1 = space();
@@ -3823,74 +3831,90 @@ var app = (function () {
     			t16 = text(t16_value);
     			t17 = space();
     			div6 = element("div");
-    			t18 = text("Information about the event:\r\n            ");
-    			textarea = element("textarea");
+    			t18 = text("Scam type:\r\n            ");
+    			input3 = element("input");
     			t19 = space();
     			div7 = element("div");
     			t20 = text(t20_value);
     			t21 = space();
+    			div8 = element("div");
+    			t22 = text("Information about the event:\r\n            ");
+    			textarea = element("textarea");
+    			t23 = space();
+    			div9 = element("div");
+    			t24 = text(t24_value);
+    			t25 = space();
     			button = element("button");
     			button.textContent = "Send";
     			attr_dev(h1, "id", "header");
-    			attr_dev(h1, "class", "svelte-93otol");
-    			add_location(h1, file$5, 66, 4, 1961);
+    			attr_dev(h1, "class", "svelte-vb6a3i");
+    			add_location(h1, file$5, 74, 4, 2257);
     			attr_dev(p0, "id", "info");
-    			attr_dev(p0, "class", "svelte-93otol");
-    			add_location(p0, file$5, 68, 8, 2078);
+    			attr_dev(p0, "class", "svelte-vb6a3i");
+    			add_location(p0, file$5, 76, 8, 2374);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "id", "name-input");
-    			attr_dev(input0, "class", "svelte-93otol");
-    			add_location(input0, file$5, 70, 12, 2155);
+    			attr_dev(input0, "class", "svelte-vb6a3i");
+    			add_location(input0, file$5, 78, 12, 2451);
     			attr_dev(div0, "id", "name");
-    			attr_dev(div0, "class", "svelte-93otol");
-    			add_location(div0, file$5, 69, 8, 2121);
-    			attr_dev(div1, "class", "error svelte-93otol");
-    			add_location(div1, file$5, 72, 8, 2244);
+    			attr_dev(div0, "class", "svelte-vb6a3i");
+    			add_location(div0, file$5, 77, 8, 2417);
+    			attr_dev(div1, "class", "error svelte-vb6a3i");
+    			add_location(div1, file$5, 80, 8, 2540);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "id", "email-input");
-    			attr_dev(input1, "class", "svelte-93otol");
-    			add_location(input1, file$5, 74, 12, 2333);
+    			attr_dev(input1, "class", "svelte-vb6a3i");
+    			add_location(input1, file$5, 82, 12, 2629);
     			attr_dev(div2, "id", "email");
-    			attr_dev(div2, "class", "svelte-93otol");
-    			add_location(div2, file$5, 73, 8, 2297);
-    			attr_dev(div3, "class", "error svelte-93otol");
-    			add_location(div3, file$5, 76, 8, 2421);
+    			attr_dev(div2, "class", "svelte-vb6a3i");
+    			add_location(div2, file$5, 81, 8, 2593);
+    			attr_dev(div3, "class", "error svelte-vb6a3i");
+    			add_location(div3, file$5, 84, 8, 2717);
     			attr_dev(p1, "id", "scam-info");
-    			attr_dev(p1, "class", "svelte-93otol");
-    			add_location(p1, file$5, 77, 8, 2472);
+    			attr_dev(p1, "class", "svelte-vb6a3i");
+    			add_location(p1, file$5, 85, 8, 2768);
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "id", "scam-email-input");
-    			attr_dev(input2, "class", "svelte-93otol");
-    			add_location(input2, file$5, 79, 12, 2567);
+    			attr_dev(input2, "class", "svelte-vb6a3i");
+    			add_location(input2, file$5, 87, 12, 2863);
     			attr_dev(div4, "id", "scam-email");
-    			attr_dev(div4, "class", "svelte-93otol");
-    			add_location(div4, file$5, 78, 8, 2521);
-    			attr_dev(div5, "class", "error svelte-93otol");
-    			add_location(div5, file$5, 81, 8, 2665);
-    			attr_dev(textarea, "class", "event-info-input svelte-93otol");
-    			add_location(textarea, file$5, 83, 12, 2784);
-    			attr_dev(div6, "id", "event-info");
-    			attr_dev(div6, "class", "svelte-93otol");
-    			add_location(div6, file$5, 82, 8, 2721);
-    			attr_dev(div7, "class", "error svelte-93otol");
-    			add_location(div7, file$5, 85, 8, 2881);
-    			attr_dev(button, "class", "btn btn-success svelte-93otol");
+    			attr_dev(div4, "class", "svelte-vb6a3i");
+    			add_location(div4, file$5, 86, 8, 2817);
+    			attr_dev(div5, "class", "error svelte-vb6a3i");
+    			add_location(div5, file$5, 89, 8, 2961);
+    			attr_dev(input3, "type", "text");
+    			attr_dev(input3, "id", "scam-type-input");
+    			attr_dev(input3, "class", "svelte-vb6a3i");
+    			add_location(input3, file$5, 91, 12, 3062);
+    			attr_dev(div6, "id", "scam-type");
+    			attr_dev(div6, "class", "svelte-vb6a3i");
+    			add_location(div6, file$5, 90, 8, 3017);
+    			attr_dev(div7, "class", "error svelte-vb6a3i");
+    			add_location(div7, file$5, 93, 8, 3161);
+    			attr_dev(textarea, "class", "event-info-input svelte-vb6a3i");
+    			add_location(textarea, file$5, 95, 12, 3282);
+    			attr_dev(div8, "id", "event-info");
+    			attr_dev(div8, "class", "svelte-vb6a3i");
+    			add_location(div8, file$5, 94, 8, 3219);
+    			attr_dev(div9, "class", "error svelte-vb6a3i");
+    			add_location(div9, file$5, 97, 8, 3379);
+    			attr_dev(button, "class", "btn btn-success svelte-vb6a3i");
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$5, 86, 8, 2931);
+    			add_location(button, file$5, 98, 8, 3429);
     			attr_dev(form, "id", "input-area");
-    			attr_dev(form, "class", "svelte-93otol");
-    			add_location(form, file$5, 67, 4, 2005);
-    			attr_dev(div8, "class", "body svelte-93otol");
-    			add_location(div8, file$5, 65, 0, 1937);
+    			attr_dev(form, "class", "svelte-vb6a3i");
+    			add_location(form, file$5, 75, 4, 2301);
+    			attr_dev(div10, "class", "body svelte-vb6a3i");
+    			add_location(div10, file$5, 73, 0, 2233);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div8, anchor);
-    			append_dev(div8, h1);
-    			append_dev(div8, t1);
-    			append_dev(div8, form);
+    			insert_dev(target, div10, anchor);
+    			append_dev(div10, h1);
+    			append_dev(div10, t1);
+    			append_dev(div10, form);
     			append_dev(form, p0);
     			append_dev(form, t3);
     			append_dev(form, div0);
@@ -3921,12 +3945,20 @@ var app = (function () {
     			append_dev(form, t17);
     			append_dev(form, div6);
     			append_dev(div6, t18);
-    			append_dev(div6, textarea);
-    			set_input_value(textarea, /*fields*/ ctx[0].info);
+    			append_dev(div6, input3);
+    			set_input_value(input3, /*fields*/ ctx[0].type_of_scam);
     			append_dev(form, t19);
     			append_dev(form, div7);
     			append_dev(div7, t20);
     			append_dev(form, t21);
+    			append_dev(form, div8);
+    			append_dev(div8, t22);
+    			append_dev(div8, textarea);
+    			set_input_value(textarea, /*fields*/ ctx[0].info);
+    			append_dev(form, t23);
+    			append_dev(form, div9);
+    			append_dev(div9, t24);
+    			append_dev(form, t25);
     			append_dev(form, button);
 
     			if (!mounted) {
@@ -3934,7 +3966,8 @@ var app = (function () {
     					listen_dev(input0, "input", /*input0_input_handler*/ ctx[3]),
     					listen_dev(input1, "input", /*input1_input_handler*/ ctx[4]),
     					listen_dev(input2, "input", /*input2_input_handler*/ ctx[5]),
-    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[6]),
+    					listen_dev(input3, "input", /*input3_input_handler*/ ctx[6]),
+    					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[7]),
     					listen_dev(form, "submit", prevent_default(/*submitHandler*/ ctx[2]), false, true, false)
     				];
 
@@ -3960,16 +3993,22 @@ var app = (function () {
 
     			if (dirty & /*errors*/ 2 && t16_value !== (t16_value = /*errors*/ ctx[1].scam_email + "")) set_data_dev(t16, t16_value);
 
+    			if (dirty & /*fields*/ 1 && input3.value !== /*fields*/ ctx[0].type_of_scam) {
+    				set_input_value(input3, /*fields*/ ctx[0].type_of_scam);
+    			}
+
+    			if (dirty & /*errors*/ 2 && t20_value !== (t20_value = /*errors*/ ctx[1].type_of_scam + "")) set_data_dev(t20, t20_value);
+
     			if (dirty & /*fields*/ 1) {
     				set_input_value(textarea, /*fields*/ ctx[0].info);
     			}
 
-    			if (dirty & /*errors*/ 2 && t20_value !== (t20_value = /*errors*/ ctx[1].info + "")) set_data_dev(t20, t20_value);
+    			if (dirty & /*errors*/ 2 && t24_value !== (t24_value = /*errors*/ ctx[1].info + "")) set_data_dev(t24, t24_value);
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div8);
+    			if (detaching) detach_dev(div10);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -3994,6 +4033,7 @@ var app = (function () {
     		nameVar: '',
     		email: '',
     		scam_email: '',
+    		type_of_scam: '',
     		info: ''
     	};
 
@@ -4001,6 +4041,7 @@ var app = (function () {
     		nameVar: '',
     		email: '',
     		scam_email: '',
+    		type_of_scam: '',
     		info: ''
     	};
 
@@ -4033,6 +4074,14 @@ var app = (function () {
     			$$invalidate(1, errors.scam_email = '', errors);
     		}
 
+    		//Type of scam field
+    		if (fields.type_of_scam.trim().length == 0) {
+    			valid = false;
+    			$$invalidate(1, errors.type_of_scam = 'Type of scam cannot be empty!', errors);
+    		} else {
+    			$$invalidate(1, errors.type_of_scam = '', errors);
+    		}
+
     		//Scam information field
     		///if (errors.info.trim().length == 0) {
     		//valid = false;
@@ -4060,7 +4109,7 @@ var app = (function () {
     		const newData = {
     			id: data.length + 1,
     			email: fields.scam_email,
-    			type_of_scam: "PayPal",
+    			type_of_scam: fields.type_of_scam,
     			report_count: "1",
     			first: "2022",
     			comments: "0"
@@ -4087,6 +4136,11 @@ var app = (function () {
 
     	function input2_input_handler() {
     		fields.scam_email = this.value;
+    		$$invalidate(0, fields);
+    	}
+
+    	function input3_input_handler() {
+    		fields.type_of_scam = this.value;
     		$$invalidate(0, fields);
     	}
 
@@ -4121,6 +4175,7 @@ var app = (function () {
     		input0_input_handler,
     		input1_input_handler,
     		input2_input_handler,
+    		input3_input_handler,
     		textarea_input_handler
     	];
     }

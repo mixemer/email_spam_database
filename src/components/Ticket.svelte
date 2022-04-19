@@ -1,8 +1,8 @@
 <script>
     import { data } from "../dummy_data";
 
-    let fields = { nameVar: '', email: '', scam_email: '', info: '', }
-    let errors = { nameVar: '', email: '', scam_email: '', info: '', }
+    let fields = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
+    let errors = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     let valid = false;
 
     const submitHandler = () => {
@@ -32,6 +32,14 @@
             errors.scam_email = '';
         }
 
+        //Type of scam field
+        if (fields.type_of_scam.trim().length == 0) {
+            valid = false;
+            errors.type_of_scam = 'Type of scam cannot be empty!';
+        } else {
+            errors.type_of_scam = '';
+        }
+
         //Scam information field
         ///if (errors.info.trim().length == 0) {
             //valid = false;
@@ -57,7 +65,7 @@
             }
         }
         //If the scam email is not reported
-        const newData = { id: (data.length + 1), email: fields.scam_email, type_of_scam: "PayPal", report_count: "1", first: "2022", comments: "0" };
+        const newData = { id: data.length + 1, email: fields.scam_email, type_of_scam: fields.type_of_scam, report_count: "1", first: "2022", comments: "0" };
         data.push(newData);
     }
 
@@ -80,6 +88,10 @@
             <input type="text" id="scam-email-input" bind:value={fields.scam_email}>
         </div>
         <div class="error">{ errors.scam_email }</div>
+        <div id="scam-type"> Scam type:
+            <input type="text" id="scam-type-input" bind:value={fields.type_of_scam}>
+        </div>
+        <div class="error">{ errors.type_of_scam }</div>
         <div id="event-info">Information about the event:
             <textarea class="event-info-input" bind:value={fields.info}></textarea>
         </div>
@@ -134,6 +146,17 @@
         justify-content: space-between;
     }
     #email-input {
+        border-radius: 10px;
+        max-height: 20px;
+        min-width: 250px;
+    }
+    #scam-type {
+        margin-top: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    #scam-type-input {
         border-radius: 10px;
         max-height: 20px;
         min-width: 250px;
