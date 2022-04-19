@@ -12,7 +12,7 @@
     $: filtered_data = data.filter(thing => thing.email.toLowerCase().startsWith(search_email.trim().toLowerCase()));
 	$: results = filtered_data.slice((current_page - 1) * shown_rows, current_page * shown_rows);
 
-	const column_names = ["#", "Email", "Type of Scam", "Number of Reports", "First Occurance", "Comments"]
+	const column_names = ["#", "Email", "Type of Scam", "Number of Reports", "First Occurance", "Comments", ""]
 
     function clickedPrevious() {
         if (current_page == 1) return;
