@@ -8,18 +8,18 @@
 	import Email from "./Email.svelte"
 	import NotFound from "./NotFound.svelte";
 
-	export let url = "";
+	// export let url = "";
 
 </script>
 
-<Router url="{url}">
+<Router>
 	<div>
 	  <Route path="{router_names.email}/:id" let:params > 
 		<Email id={params.id} />
 	  </Route>
 	  <Route path="{router_names.FAQs}" component="{FAQs}" />
 	  <Route path="{router_names.report}" component="{Report}" />
-	  <Route path="" >
+	  <Route path="/" >
 		<Home search_email={""} />
 	  </Route>
 
