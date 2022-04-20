@@ -1,6 +1,7 @@
 <script>
     import { data } from "../dummy_data";
     import { scam_types } from "../globals";
+    import Toast from "./Toast.svelte"
 
     let fields = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     let errors = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
@@ -60,6 +61,12 @@
         //If the scam email is not reported
         const newData = { id: data.length + 1, email: fields.scam_email, type_of_scam: scam_types[fields.type_of_scam].scam_name, report_count: "1", first: "2022", comments: "0" };
         data.push(newData);
+
+        var toastLiveExample = document.getElementById('liveToastSuccess')
+        var toast = new bootstrap.Toast(toastLiveExample)
+        toast.show()
+        
+        fields = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     }
 
 </script>
@@ -94,6 +101,9 @@
         <div class="error">{ errors.type_of_scam }</div>
         <button class="btn btn-success" type="submit">Send</button>
     </form>
+
+    <!-- Toasts -->
+	<Toast title="Scam Email Submitted" success={true}/>
 </div>
 
 <style>
