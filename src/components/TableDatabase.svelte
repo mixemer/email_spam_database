@@ -17,7 +17,7 @@
     const reportsIndex = 3
     const firstIndex = 4
     const commentsIndex = 5
-    let sortAsc = true;
+    let sortAsc = false;
     let sortVal = reportsIndex;
     function sort(a, b) {
         if (sortVal == reportsIndex) { // report_count
