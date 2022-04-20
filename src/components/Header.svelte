@@ -63,7 +63,7 @@
 	  </div>
 
 	  <!-- Toasts -->
-	  <Toast />
+	  <Toast title="Seach Field Empty" success={false} />
 
 	  <br>
 </div>
