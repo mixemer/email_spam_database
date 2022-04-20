@@ -5,7 +5,7 @@
 
     const shown_rows = 10;
     $: current_page = search_email.trim() === '' ? 1 : 1;
-    $: max_page_count = Math.round(filtered_data.length / shown_rows);
+    $: max_page_count = Math.ceil(filtered_data.length / shown_rows);
     export let search_email = '';
 
 	
