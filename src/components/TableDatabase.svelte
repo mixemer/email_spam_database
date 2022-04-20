@@ -3,7 +3,7 @@
     import { data } from "../dummy_data";
     import { router_names } from "../globals"
 
-    const shown_rows = 10;
+    let shown_rows = 10;
     $: current_page = search_email.trim() === '' ? 1 : 1;
     $: max_page_count = Math.ceil(filtered_data.length / shown_rows);
     export let search_email = '';
@@ -94,20 +94,28 @@
           <h1 class="text-center"> No Email Found </h1>
       {/if}
 
-      <nav aria-label="Page navigation example">
-        <ul class="pagination pagination-sm">
-            <li class="page-item {current_page <= 1 ? 'disabled' : ''}"><span class="page-link"
-                 on:click={() => clickedPrevious()}>Previous</span></li>
-            
-            {#each Array((max_page_count)) as _, i}
-                <li class="page-item {i+1 == current_page ? 'active' : ''}"><span class="page-link" 
-                    on:click={() => clickedOnPage(i+1)}>{i+1}</span></li>
-            {/each}
+      <div class="d-flex justify-content-between">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm">
+                <li class="page-item {current_page <= 1 ? 'disabled' : ''}"><span class="page-link"
+                    on:click={() => clickedPrevious()}>Previous</span></li>
+                
+                {#each Array((max_page_count)) as _, i}
+                    <li class="page-item {i+1 == current_page ? 'active' : ''}"><span class="page-link" 
+                        on:click={() => clickedOnPage(i+1)}>{i+1}</span></li>
+                {/each}
 
-          <li class="page-item {current_page >= max_page_count ? 'disabled' : ''}"><span class="page-link" 
-            on:click={() => clickedNext()}>Next</span></li>
-        </ul>
-      </nav>
+            <li class="page-item {current_page >= max_page_count ? 'disabled' : ''}"><span class="page-link" 
+                on:click={() => clickedNext()}>Next</span></li>
+            </ul>
+        </nav>
+
+        <select class="form-select" bind:value="{shown_rows}" on:change={() => {current_page = 1}}  aria-label="Default select example">
+            <option selected value={5}>5</option>
+            <option value={10}>10</option>
+            <option value={20}>20</option>
+        </select>
+      </div>
 </div>
 
 <style>
@@ -125,5 +133,8 @@ span {
 }
 .clickable {
     cursor: pointer;
+}
+select {
+    width: 100px;
 }
 </style>
