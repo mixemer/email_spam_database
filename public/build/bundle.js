@@ -4922,14 +4922,14 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
+    	child_ctx[2] = list[i];
     	return child_ctx;
     }
 
     // (17:8) {#each column_names as column}
     function create_each_block(ctx) {
     	let td;
-    	let t0_value = /*column*/ ctx[3] + "";
+    	let t0_value = /*column*/ ctx[2] + "";
     	let t0;
     	let t1;
 
@@ -4963,7 +4963,7 @@ var app = (function () {
     	return block;
     }
 
-    // (28:8) <Link class="navbar-brand fs-1 text-decoration-none" to="{router_names.report}" on:click={() => current = router_names.report}>
+    // (28:8) <Link class="navbar-brand fs-1 text-decoration-none"  to="{router_names.report}">
     function create_default_slot$2(ctx) {
     	let button;
 
@@ -4973,7 +4973,7 @@ var app = (function () {
     			button.textContent = "+ Report";
     			attr_dev(button, "class", "btn btn-success svelte-h1ptyv");
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$3, 27, 136, 759);
+    			add_location(button, file$3, 27, 90, 713);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -4988,7 +4988,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(28:8) <Link class=\\\"navbar-brand fs-1 text-decoration-none\\\" to=\\\"{router_names.report}\\\" on:click={() => current = router_names.report}>",
+    		source: "(28:8) <Link class=\\\"navbar-brand fs-1 text-decoration-none\\\"  to=\\\"{router_names.report}\\\">",
     		ctx
     	});
 
@@ -5041,8 +5041,6 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	link.$on("click", /*click_handler*/ ctx[2]);
-
     	const block = {
     		c: function create() {
     			div1 = element("div");
@@ -5087,7 +5085,7 @@ var app = (function () {
     			attr_dev(table, "class", "table table-borderless svelte-h1ptyv");
     			add_location(table, file$3, 13, 2, 274);
     			attr_dev(div0, "class", "d-flex justify-content-between");
-    			add_location(div0, file$3, 32, 2, 871);
+    			add_location(div0, file$3, 32, 2, 825);
     			attr_dev(div1, "class", "body svelte-h1ptyv");
     			add_location(div1, file$3, 12, 0, 253);
     		},
@@ -5155,7 +5153,7 @@ var app = (function () {
     			if ((!current || dirty & /*emailData*/ 1) && t7_value !== (t7_value = /*emailData*/ ctx[0].first + "")) set_data_dev(t7, t7_value);
     			const link_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 32) {
     				link_changes.$$scope = { dirty, ctx };
     			}
 
@@ -5199,8 +5197,6 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Emails> was created with unknown prop '${key}'`);
     	});
 
-    	const click_handler = () => current = router_names.report;
-
     	$$self.$$set = $$props => {
     		if ('emailData' in $$props) $$invalidate(0, emailData = $$props.emailData);
     	};
@@ -5221,7 +5217,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [emailData, column_names, click_handler];
+    	return [emailData, column_names];
     }
 
     class Emails extends SvelteComponentDev {

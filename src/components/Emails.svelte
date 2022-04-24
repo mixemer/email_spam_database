@@ -25,7 +25,7 @@
         <th>{emailData.type_of_scam}</th>
         <th>{emailData.report_count}</th>
         <th>{emailData.first}</th>
-        <Link class="navbar-brand fs-1 text-decoration-none" to="{router_names.report}" on:click={() => current = router_names.report}> <button class="btn btn-success" type="submit"> + Report </button></Link>
+        <Link class="navbar-brand fs-1 text-decoration-none"  to="{router_names.report}"> <button class="btn btn-success" type="submit"> + Report </button></Link>
       </tr>
     </tbody>
   </table>
