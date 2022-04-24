@@ -5,7 +5,7 @@
 
 <div >
 	<Header current="{router_names.FAQs}" />
-	<h1>FAQs</h1>
+	<h1> FAQs</h1>
 </div>
 
 <style>

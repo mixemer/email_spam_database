@@ -2625,7 +2625,7 @@ var app = (function () {
     }
 
     // (49:6) <Link class="nav-link {current === router_names.FAQs ? 'active' : ''}"        to="{router_names.FAQs}" on:click={() => current = router_names.FAQs}>
-    function create_default_slot$2(ctx) {
+    function create_default_slot$3(ctx) {
     	let t;
 
     	const block = {
@@ -2642,7 +2642,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$2.name,
+    		id: create_default_slot$3.name,
     		type: "slot",
     		source: "(49:6) <Link class=\\\"nav-link {current === router_names.FAQs ? 'active' : ''}\\\"        to=\\\"{router_names.FAQs}\\\" on:click={() => current = router_names.FAQs}>",
     		ctx
@@ -2728,7 +2728,7 @@ var app = (function () {
     			props: {
     				class: "nav-link " + (/*current*/ ctx[1] === router_names.FAQs ? 'active' : ''),
     				to: router_names.FAQs,
-    				$$slots: { default: [create_default_slot$2] },
+    				$$slots: { default: [create_default_slot$3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -4922,33 +4922,33 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[2] = list[i];
+    	child_ctx[3] = list[i];
     	return child_ctx;
     }
 
-    // (14:12) {#each column_names as column}
+    // (17:8) {#each column_names as column}
     function create_each_block(ctx) {
-    	let th;
-    	let t0_value = /*column*/ ctx[2] + "";
+    	let td;
+    	let t0_value = /*column*/ ctx[3] + "";
     	let t0;
     	let t1;
 
     	const block = {
     		c: function create() {
-    			th = element("th");
+    			td = element("td");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(th, "scope", "col");
-    			add_location(th, file$3, 14, 12, 376);
+    			attr_dev(td, "class", "svelte-h1ptyv");
+    			add_location(td, file$3, 17, 10, 385);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, th, anchor);
-    			append_dev(th, t0);
-    			append_dev(th, t1);
+    			insert_dev(target, td, anchor);
+    			append_dev(td, t0);
+    			append_dev(td, t1);
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(th);
+    			if (detaching) detach_dev(td);
     		}
     	};
 
@@ -4956,7 +4956,39 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(14:12) {#each column_names as column}",
+    		source: "(17:8) {#each column_names as column}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (28:8) <Link class="navbar-brand fs-1 text-decoration-none" to="{router_names.report}" on:click={() => current = router_names.report}>
+    function create_default_slot$2(ctx) {
+    	let button;
+
+    	const block = {
+    		c: function create() {
+    			button = element("button");
+    			button.textContent = "+ Report";
+    			attr_dev(button, "class", "btn btn-success svelte-h1ptyv");
+    			attr_dev(button, "type", "submit");
+    			add_location(button, file$3, 27, 136, 759);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, button, anchor);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(button);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$2.name,
+    		type: "slot",
+    		source: "(28:8) <Link class=\\\"navbar-brand fs-1 text-decoration-none\\\" to=\\\"{router_names.report}\\\" on:click={() => current = router_names.report}>",
     		ctx
     	});
 
@@ -4965,25 +4997,32 @@ var app = (function () {
 
     function create_fragment$3(ctx) {
     	let div1;
-    	let h1;
-    	let t1;
     	let table;
     	let thead;
     	let tr0;
-    	let t2;
+    	let t0;
     	let tbody;
     	let tr1;
-    	let th;
+    	let th0;
+    	let t1_value = /*emailData*/ ctx[0].email + "";
+    	let t1;
+    	let t2;
+    	let th1;
+    	let t3_value = /*emailData*/ ctx[0].type_of_scam + "";
     	let t3;
-    	let td0;
+    	let t4;
+    	let th2;
+    	let t5_value = /*emailData*/ ctx[0].report_count + "";
     	let t5;
-    	let td1;
+    	let t6;
+    	let th3;
+    	let t7_value = /*emailData*/ ctx[0].first + "";
     	let t7;
-    	let td2;
+    	let t8;
+    	let link;
     	let t9;
-    	let td3;
-    	let t11;
     	let div0;
+    	let current;
     	let each_value = /*column_names*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -4992,12 +5031,21 @@ var app = (function () {
     		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
     	}
 
+    	link = new Link({
+    			props: {
+    				class: "navbar-brand fs-1 text-decoration-none",
+    				to: router_names.report,
+    				$$slots: { default: [create_default_slot$2] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	link.$on("click", /*click_handler*/ ctx[2]);
+
     	const block = {
     		c: function create() {
     			div1 = element("div");
-    			h1 = element("h1");
-    			h1.textContent = "Scam Email Ticket";
-    			t1 = space();
     			table = element("table");
     			thead = element("thead");
     			tr0 = element("tr");
@@ -5006,51 +5054,48 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			t2 = space();
+    			t0 = space();
     			tbody = element("tbody");
     			tr1 = element("tr");
-    			th = element("th");
-    			t3 = space();
-    			td0 = element("td");
-    			td0.textContent = `${/*emailData*/ ctx[0].email}`;
-    			t5 = space();
-    			td1 = element("td");
-    			td1.textContent = `${/*emailData*/ ctx[0].type_of_scam}`;
-    			t7 = space();
-    			td2 = element("td");
-    			td2.textContent = `${/*emailData*/ ctx[0].type_of_scam}`;
+    			th0 = element("th");
+    			t1 = text(t1_value);
+    			t2 = space();
+    			th1 = element("th");
+    			t3 = text(t3_value);
+    			t4 = space();
+    			th2 = element("th");
+    			t5 = text(t5_value);
+    			t6 = space();
+    			th3 = element("th");
+    			t7 = text(t7_value);
+    			t8 = space();
+    			create_component(link.$$.fragment);
     			t9 = space();
-    			td3 = element("td");
-    			td3.textContent = `${/*emailData*/ ctx[0].first}`;
-    			t11 = space();
     			div0 = element("div");
-    			attr_dev(h1, "id", "header");
-    			attr_dev(h1, "class", "svelte-1k721xd");
-    			add_location(h1, file$3, 9, 4, 225);
-    			add_location(tr0, file$3, 12, 10, 316);
-    			add_location(thead, file$3, 11, 8, 298);
-    			attr_dev(th, "scope", "row");
-    			add_location(th, file$3, 21, 12, 506);
-    			add_location(td0, file$3, 22, 12, 540);
-    			add_location(td1, file$3, 23, 12, 579);
-    			add_location(td2, file$3, 24, 12, 625);
-    			add_location(td3, file$3, 25, 12, 671);
-    			add_location(tr1, file$3, 20, 10, 489);
-    			add_location(tbody, file$3, 19, 8, 471);
-    			attr_dev(table, "class", "table");
-    			add_location(table, file$3, 10, 4, 268);
+    			add_location(tr0, file$3, 15, 6, 331);
+    			add_location(thead, file$3, 14, 4, 317);
+    			attr_dev(th0, "class", "svelte-h1ptyv");
+    			add_location(th0, file$3, 23, 8, 477);
+    			attr_dev(th1, "class", "svelte-h1ptyv");
+    			add_location(th1, file$3, 24, 8, 512);
+    			attr_dev(th2, "class", "svelte-h1ptyv");
+    			add_location(th2, file$3, 25, 8, 554);
+    			attr_dev(th3, "class", "svelte-h1ptyv");
+    			add_location(th3, file$3, 26, 8, 596);
+    			add_location(tr1, file$3, 22, 6, 464);
+    			add_location(tbody, file$3, 21, 4, 450);
+    			attr_dev(table, "class", "table table-borderless svelte-h1ptyv");
+    			add_location(table, file$3, 13, 2, 274);
     			attr_dev(div0, "class", "d-flex justify-content-between");
-    			add_location(div0, file$3, 31, 6, 760);
-    			attr_dev(div1, "class", "body svelte-1k721xd");
-    			add_location(div1, file$3, 8, 0, 202);
+    			add_location(div0, file$3, 32, 2, 871);
+    			attr_dev(div1, "class", "body svelte-h1ptyv");
+    			add_location(div1, file$3, 12, 0, 253);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
-    			append_dev(div1, h1);
-    			append_dev(div1, t1);
     			append_dev(div1, table);
     			append_dev(table, thead);
     			append_dev(thead, tr0);
@@ -5059,20 +5104,25 @@ var app = (function () {
     				each_blocks[i].m(tr0, null);
     			}
 
-    			append_dev(table, t2);
+    			append_dev(table, t0);
     			append_dev(table, tbody);
     			append_dev(tbody, tr1);
-    			append_dev(tr1, th);
-    			append_dev(tr1, t3);
-    			append_dev(tr1, td0);
-    			append_dev(tr1, t5);
-    			append_dev(tr1, td1);
-    			append_dev(tr1, t7);
-    			append_dev(tr1, td2);
-    			append_dev(tr1, t9);
-    			append_dev(tr1, td3);
-    			append_dev(div1, t11);
+    			append_dev(tr1, th0);
+    			append_dev(th0, t1);
+    			append_dev(tr1, t2);
+    			append_dev(tr1, th1);
+    			append_dev(th1, t3);
+    			append_dev(tr1, t4);
+    			append_dev(tr1, th2);
+    			append_dev(th2, t5);
+    			append_dev(tr1, t6);
+    			append_dev(tr1, th3);
+    			append_dev(th3, t7);
+    			append_dev(tr1, t8);
+    			mount_component(link, tr1, null);
+    			append_dev(div1, t9);
     			append_dev(div1, div0);
+    			current = true;
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*column_names*/ 2) {
@@ -5098,12 +5148,32 @@ var app = (function () {
 
     				each_blocks.length = each_value.length;
     			}
+
+    			if ((!current || dirty & /*emailData*/ 1) && t1_value !== (t1_value = /*emailData*/ ctx[0].email + "")) set_data_dev(t1, t1_value);
+    			if ((!current || dirty & /*emailData*/ 1) && t3_value !== (t3_value = /*emailData*/ ctx[0].type_of_scam + "")) set_data_dev(t3, t3_value);
+    			if ((!current || dirty & /*emailData*/ 1) && t5_value !== (t5_value = /*emailData*/ ctx[0].report_count + "")) set_data_dev(t5, t5_value);
+    			if ((!current || dirty & /*emailData*/ 1) && t7_value !== (t7_value = /*emailData*/ ctx[0].first + "")) set_data_dev(t7, t7_value);
+    			const link_changes = {};
+
+    			if (dirty & /*$$scope*/ 64) {
+    				link_changes.$$scope = { dirty, ctx };
+    			}
+
+    			link.$set(link_changes);
     		},
-    		i: noop,
-    		o: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(link.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(link.$$.fragment, local);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			destroy_each(each_blocks, detaching);
+    			destroy_component(link);
     		}
     	};
 
@@ -5121,15 +5191,27 @@ var app = (function () {
     function instance$3($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Emails', slots, []);
-    	let emailData = data.find(d => d.id == id);
+    	let { emailData = "" } = $$props;
     	const column_names = ["Email", "Type of Scam", "Number of Reports", "First Occurance"];
-    	const writable_props = [];
+    	const writable_props = ['emailData'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Emails> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ data, emailData, column_names });
+    	const click_handler = () => current = router_names.report;
+
+    	$$self.$$set = $$props => {
+    		if ('emailData' in $$props) $$invalidate(0, emailData = $$props.emailData);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		router_names,
+    		navigate,
+    		Link,
+    		emailData,
+    		column_names
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('emailData' in $$props) $$invalidate(0, emailData = $$props.emailData);
@@ -5139,13 +5221,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [emailData, column_names];
+    	return [emailData, column_names, click_handler];
     }
 
     class Emails extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { emailData: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -5153,6 +5235,14 @@ var app = (function () {
     			options,
     			id: create_fragment$3.name
     		});
+    	}
+
+    	get emailData() {
+    		throw new Error("<Emails>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set emailData(value) {
+    		throw new Error("<Emails>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -5162,32 +5252,38 @@ var app = (function () {
     function create_fragment$2(ctx) {
     	let div;
     	let header;
-    	let t0;
-    	let h1;
-    	let t2;
+    	let t;
     	let emails;
+    	let updating_emailData;
     	let current;
 
     	header = new Header({
     			props: {
-    				current: "" + (router_names.email + "/" + /*id*/ ctx[0])
+    				current: "" + (router_names.email + "/" + /*id*/ ctx[1])
     			},
     			$$inline: true
     		});
 
-    	emails = new Emails({ $$inline: true });
+    	function emails_emailData_binding(value) {
+    		/*emails_emailData_binding*/ ctx[2](value);
+    	}
+
+    	let emails_props = {};
+
+    	if (/*emailData*/ ctx[0] !== void 0) {
+    		emails_props.emailData = /*emailData*/ ctx[0];
+    	}
+
+    	emails = new Emails({ props: emails_props, $$inline: true });
+    	binding_callbacks.push(() => bind(emails, 'emailData', emails_emailData_binding));
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			create_component(header.$$.fragment);
-    			t0 = space();
-    			h1 = element("h1");
-    			h1.textContent = "Hello World";
-    			t2 = space();
+    			t = space();
     			create_component(emails.$$.fragment);
-    			add_location(h1, file$2, 13, 4, 379);
-    			add_location(div, file$2, 11, 0, 322);
+    			add_location(div, file$2, 11, 0, 335);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5195,16 +5291,23 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			mount_component(header, div, null);
-    			append_dev(div, t0);
-    			append_dev(div, h1);
-    			append_dev(div, t2);
+    			append_dev(div, t);
     			mount_component(emails, div, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
     			const header_changes = {};
-    			if (dirty & /*id*/ 1) header_changes.current = "" + (router_names.email + "/" + /*id*/ ctx[0]);
+    			if (dirty & /*id*/ 2) header_changes.current = "" + (router_names.email + "/" + /*id*/ ctx[1]);
     			header.$set(header_changes);
+    			const emails_changes = {};
+
+    			if (!updating_emailData && dirty & /*emailData*/ 1) {
+    				updating_emailData = true;
+    				emails_changes.emailData = /*emailData*/ ctx[0];
+    				add_flush_callback(() => updating_emailData = false);
+    			}
+
+    			emails.$set(emails_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -5239,15 +5342,21 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Email', slots, []);
     	let { id = "" } = $$props;
-    	let emailData = data.find(d => d.id == id);
-    	const writable_props = ['id'];
+    	let { emailData = data.find(d => d.id == id) } = $$props;
+    	const writable_props = ['id', 'emailData'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Email> was created with unknown prop '${key}'`);
     	});
 
+    	function emails_emailData_binding(value) {
+    		emailData = value;
+    		$$invalidate(0, emailData);
+    	}
+
     	$$self.$$set = $$props => {
-    		if ('id' in $$props) $$invalidate(0, id = $$props.id);
+    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
+    		if ('emailData' in $$props) $$invalidate(0, emailData = $$props.emailData);
     	};
 
     	$$self.$capture_state = () => ({
@@ -5260,21 +5369,21 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('id' in $$props) $$invalidate(0, id = $$props.id);
-    		if ('emailData' in $$props) emailData = $$props.emailData;
+    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
+    		if ('emailData' in $$props) $$invalidate(0, emailData = $$props.emailData);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [id];
+    	return [emailData, id, emails_emailData_binding];
     }
 
     class Email extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { id: 0 });
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { id: 1, emailData: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -5289,6 +5398,14 @@ var app = (function () {
     	}
 
     	set id(value) {
+    		throw new Error("<Email>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get emailData() {
+    		throw new Error("<Email>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set emailData(value) {
     		throw new Error("<Email>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
