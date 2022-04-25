@@ -1,9 +1,12 @@
 <script>
-  import { router_names } from "../globals";
+  import { router_names, sounds } from "../globals";
   import { navigate, Link } from "svelte-routing";
   import Toast from "./Toast.svelte";
   export let emailData = "";
   export let commentData = "";
+
+  var successSound = new Audio(sounds.success)
+  var warningSound = new Audio(sounds.warning)
 
   const column_names = [
     "Email",
@@ -35,6 +38,8 @@
     }
     if (valid) {
       submitFields();
+    } else {
+      warningSound.play();
     }
   };
   function submitFields() {
@@ -50,6 +55,7 @@
       var toastLiveExample = document.getElementById("liveToastSuccess");
       var toast = new bootstrap.Toast(toastLiveExample);
       toast.show();
+      successSound.play();
 
       fields = {
         email: "",
