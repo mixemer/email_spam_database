@@ -3047,25 +3047,25 @@ var app = (function () {
     }
 
     const data = [
-        { id: 1, email: 'fofis15650@arpizol.com', type_of_scam: "Urgent Offer", report_count: "100", first: "2000", comments: "100" },
-        { id: 2, email: 'Beemsee28@jourrapide.com', type_of_scam: "PayPal", report_count: "30", first: "2010", comments: "100" },
-        { id: 3, email: 'rnewman@yahoo.ca', type_of_scam: "Fake Billing", report_count: "23", first: "2020", comments: "100" },
-        { id: 4, email: 'hermanab@outlook.com', type_of_scam: "Fake Virus", report_count: "65", first: "2021", comments: "100" },
-        { id: 5, email: 'stewwy@gmail.com', type_of_scam: "Romance", report_count: "43", first: "2000", comments: "100" },
-        { id: 6, email: 'cderoove@verizon.net', type_of_scam: "Government", report_count: "1111", first: "2001", comments: "100" },
-        { id: 7, email: 'uncled@gmail.com', type_of_scam: "Romance", report_count: "221", first: "2003", comments: "100" },
-        { id: 8, email: 'trygstad@mac.com', type_of_scam: "Fake Virus", report_count: "1233", first: "2003", comments: "100" },
-        { id: 9, email: 'fake@gmail.com', type_of_scam: "Romance", report_count: "23", first: "2012", comments: "100" },
-        { id: 10, email: 'mastinfo@me.com', type_of_scam: "Mystery Shopper", report_count: "1", first: "2015", comments: "100" },
+        { id: 1, email: 'fofis15650@arpizol.com', type_of_scam: "Urgent Offer", report_count: "100", first: "2000", comments: "100", commentLog: [{ username: "bob", email: "bobby@gmail.com", date_created: "5/24/2022", comment: "Had similar scam experience" }, { username: "rosa", email: "rosa@gmail.com", date_created: "5/24/2022", comment: "Almost took the offer" }] },
+        { id: 2, email: 'Beemsee28@jourrapide.com', type_of_scam: "PayPal", report_count: "30", first: "2010", comments: "100",commentLog: [{ username: "anonymous", email: "unknown", date_created: "5/24/2022", comment: "Hate these kinds of scam" }, { username: "jake", email: "jakey@gmail.com", date_created: "5/24/2022", comment: "Always get scammed in this manner" }]},
+        { id: 3, email: 'rnewman@yahoo.ca', type_of_scam: "Fake Billing", report_count: "23", first: "2020", comments: "100",commentLog: [{ username: "Boyle", email: "unknown", date_created: "5/24/2022", comment: "Hate these kinds of scam" }, { username: "holt", email: "captHolt@gmail.com", date_created: "5/24/2022", comment: "Always get scammed in this manner, iykyk" }]},
+        { id: 4, email: 'hermanab@outlook.com', type_of_scam: "Fake Virus", report_count: "65", first: "2021", comments: "100",commentLog: [{ username: "Gina", email: "gina@yahoo.com", date_created: "5/24/2022", comment: "Hate these kinds of scam" }, { username: "Terry", email: "terry@gmail.com", date_created: "5/24/2022", comment: "LOL, was about to click on the link" }] },
+        { id: 5, email: 'stewwy@gmail.com', type_of_scam: "Romance", report_count: "43", first: "2000", comments: "100",commentLog: [{ username: "Gina", email: "gina@yahoo.com", date_created: "5/24/2022", comment: "Hate these kinds of scam" }, { username: "Terry", email: "terry@gmail.com", date_created: "5/24/2022", comment: "Almost was about to click on the link" }] },
+        { id: 6, email: 'cderoove@verizon.net', type_of_scam: "Government", report_count: "1111", first: "2001", comments: "100",commentLog: [{ username: "Croode", email: "croode@yahoo.com", date_created: "5/24/2022", comment: "Always get me with taxes fraud" }, { username: "Terry", email: "terry@gmail.com", date_created: "5/24/2022", comment: "LOL, was about to click on the link" }] },
+        { id: 7, email: 'uncled@gmail.com', type_of_scam: "Romance", report_count: "221", first: "2003", comments: "100",commentLog: [{ username: "Hitchcock", email: "scully@yahoo.com", date_created: "5/24/2022", comment: "Hate these kinds of scams" }, { username: "Scully", email: "hitchcock@gmail.com", date_created: "5/24/2022", comment: "My fingers slipped on the  link." }] },
+        { id: 8, email: 'trygstad@mac.com', type_of_scam: "Fake Virus", report_count: "1233", first: "2003", comments: "100" ,commentLog: [{ username: "Ross", email: "rrachel@yahoo.com", date_created: "5/24/2022", comment: "Hate these kinds of scams" }, { username: "Rachel", email: "rachel@gmail.com", date_created: "5/24/2022", comment: "I just want a break from these scams" }]},
+        { id: 9, email: 'fake@gmail.com', type_of_scam: "Romance", report_count: "23", first: "2012", comments: "100",commentLog: [{ username: "Anonymouse", email: "gina@yahoo.com", date_created: "5/24/2022", comment: "Hate these kinds of scam" }, { username: "Anonymous", email: "terry@gmail.com", date_created: "5/24/2022", comment: "Thank god i saw this" }] },
+        { id: 10, email: 'mastinfo@me.com', type_of_scam: "Mystery Shopper", report_count: "1", first: "2015", comments: "100",commentLog: [{ username: "Anonymous", email: "unknown@yahoo.com", date_created: "5/24/2022", comment: "Too often I get scam from this one" }, { username: "Anonymous", email: "unknown@gmail.com", date_created: "5/24/2022", comment: "Almost had me, was about to click on the link" }]},
 
-        { id: 11, email: 'privcan@mac.com', type_of_scam: "Tax", report_count: "432", first: "2012", comments: "100" },
-        { id: 12, email: 'seurat@sbcglobal.net', type_of_scam: "Hidden URL", report_count: "7777", first: "2017", comments: "100" },
-        { id: 13, email: 'cderoove@verizon.net', type_of_scam: "PayPal", report_count: "67", first: "2021", comments: "100" },
-        { id: 14, email: 'campbell@me.com', type_of_scam: "Romance", report_count: "865", first: "2020", comments: "100" },
-        { id: 15, email: 'barjam@aol.com', type_of_scam: "Property", report_count: "55", first: "2010", comments: "100" },
-        { id: 16, email: 'itstatus@gmail.com', type_of_scam: "Romance", report_count: "5", first: "2006", comments: "100" },
-        { id: 17, email: 'padme@icloud.com', type_of_scam: "Charity", report_count: "1", first: "2009", comments: "100" },
-        { id: 18, email: 'intlprog@gmail.com', type_of_scam: "Money Transfer", report_count: "1231", first: "2005", comments: "100" },
+        { id: 11, email: 'privcan@mac.com', type_of_scam: "Tax", report_count: "432", first: "2012", comments: "100", commentLog: [{ username: "Anonymous", email: "unknown@yahoo.com", date_created: "5/24/2022", comment: "Too often I get scam from this one" }, { username: "Anonymous", email: "unknown@gmail.com", date_created: "5/24/2022", comment: "Almost had me, was about to click on the link" }] },
+        { id: 12, email: 'seurat@sbcglobal.net', type_of_scam: "Hidden URL", report_count: "7777", first: "2017", comments: "100",commentLog: [{ username: "Anonymous", email: "unknown@yahoo.com", date_created: "5/24/2022", comment: "Too often I get scam from this one" }, { username: "Anonymous", email: "unknown@gmail.com", date_created: "5/24/2022", comment: "Almost had me, was about to click on the link" }]},
+        { id: 13, email: 'cderoove@verizon.net', type_of_scam: "PayPal", report_count: "67", first: "2021", comments: "100",commentLog: [{ username: "Anonymous", email: "unknown@yahoo.com", date_created: "5/24/2022", comment: "Too often I get scam from this one" }, { username: "Anonymous", email: "unknown@gmail.com", date_created: "5/24/2022", comment: "Almost had me, was about to click on the link" }] },
+        { id: 14, email: 'campbell@me.com', type_of_scam: "Romance", report_count: "865", first: "2020", comments: "100",commentLog: [{ username: "Anonymous", email: "unknown@yahoo.com", date_created: "5/24/2022", comment: "Too often I get scam from this one" }, { username: "Anonymous", email: "unknown@gmail.com", date_created: "5/24/2022", comment: "Almost had me, was about to click on the link" }] },
+        { id: 15, email: 'barjam@aol.com', type_of_scam: "Property", report_count: "55", first: "2010", comments: "100",commentLog: [{ username: "Anonymous", email: "unknown@yahoo.com", date_created: "5/24/2022", comment: "Too often I get scam from this one" }, { username: "Anonymous", email: "unknown@gmail.com", date_created: "5/24/2022", comment: "Almost had me, was about to click on the link" }] },
+        { id: 16, email: 'itstatus@gmail.com', type_of_scam: "Romance", report_count: "5", first: "2006", comments: "100",commentLog: [{ username: "Anonymous", email: "unknown@yahoo.com", date_created: "5/24/2022", comment: "Too often I get scam from this one" }, { username: "Anonymous", email: "unknown@gmail.com", date_created: "5/24/2022", comment: "Almost had me, was about to click on the link" }] },
+        { id: 17, email: 'padme@icloud.com', type_of_scam: "Charity", report_count: "1", first: "2009", comments: "100",commentLog: [{ username: "Anonymous", email: "unknown@yahoo.com", date_created: "5/24/2022", comment: "Too often I get scam from this one" }, { username: "Anonymous", email: "unknown@gmail.com", date_created: "5/24/2022", comment: "Almost had me, was about to click on the link" }] },
+        { id: 18, email: 'intlprog@gmail.com', type_of_scam: "Money Transfer", report_count: "1231", first: "2005", comments: "100",commentLog: [{ username: "Anonymous", email: "unknown@yahoo.com", date_created: "5/24/2022", comment: "Too often I get scam from this one" }, { username: "Anonymous", email: "unknown@gmail.com", date_created: "5/24/2022", comment: "Almost had me, was about to click on the link" }] },
     ];
 
     /* src/components/TableDatabase.svelte generated by Svelte v3.47.0 */
@@ -3080,7 +3080,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    function get_each_context_1(ctx, list, i) {
+    function get_each_context_1$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
     	child_ctx[25] = list[i];
     	child_ctx[24] = i;
@@ -3275,7 +3275,7 @@ var app = (function () {
     }
 
     // (79:12) {#each results as result, i}
-    function create_each_block_1(ctx) {
+    function create_each_block_1$1(ctx) {
     	let tr;
     	let td0;
     	let t0_value = /*i*/ ctx[24] + 1 + "";
@@ -3393,7 +3393,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block_1.name,
+    		id: create_each_block_1$1.name,
     		type: "each",
     		source: "(79:12) {#each results as result, i}",
     		ctx
@@ -3537,7 +3537,7 @@ var app = (function () {
     	let each_blocks_1 = [];
 
     	for (let i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    		each_blocks_1[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
     	}
 
     	let if_block = /*results*/ ctx[5].length === 0 && create_if_block(ctx);
@@ -3720,12 +3720,12 @@ var app = (function () {
     				let i;
 
     				for (i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+    					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
 
     					if (each_blocks_1[i]) {
     						each_blocks_1[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks_1[i] = create_each_block_1(child_ctx);
+    						each_blocks_1[i] = create_each_block_1$1(child_ctx);
     						each_blocks_1[i].c();
     						each_blocks_1[i].m(tbody, null);
     					}
@@ -4922,14 +4922,20 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[2] = list[i];
+    	child_ctx[11] = list[i];
     	return child_ctx;
     }
 
-    // (17:8) {#each column_names as column}
-    function create_each_block(ctx) {
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[14] = list[i];
+    	return child_ctx;
+    }
+
+    // (67:8) {#each column_names as column}
+    function create_each_block_1(ctx) {
     	let td;
-    	let t0_value = /*column*/ ctx[2] + "";
+    	let t0_value = /*column*/ ctx[14] + "";
     	let t0;
     	let t1;
 
@@ -4938,8 +4944,8 @@ var app = (function () {
     			td = element("td");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(td, "class", "svelte-h1ptyv");
-    			add_location(td, file$3, 17, 10, 385);
+    			attr_dev(td, "class", "svelte-1y1ssr2");
+    			add_location(td, file$3, 67, 10, 1623);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, td, anchor);
@@ -4954,16 +4960,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block.name,
+    		id: create_each_block_1.name,
     		type: "each",
-    		source: "(17:8) {#each column_names as column}",
+    		source: "(67:8) {#each column_names as column}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (28:8) <Link class="navbar-brand fs-1 text-decoration-none"  to="{router_names.report}">
+    // (78:8) <Link           class="navbar-brand fs-1 text-decoration-none"           to={router_names.report}         >
     function create_default_slot$2(ctx) {
     	let button;
 
@@ -4971,9 +4977,9 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			button.textContent = "+ Report";
-    			attr_dev(button, "class", "btn btn-success svelte-h1ptyv");
+    			attr_dev(button, "class", "btn btn-success svelte-1y1ssr2");
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$3, 27, 90, 713);
+    			add_location(button, file$3, 81, 10, 1987);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -4988,7 +4994,58 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(28:8) <Link class=\\\"navbar-brand fs-1 text-decoration-none\\\"  to=\\\"{router_names.report}\\\">",
+    		source: "(78:8) <Link           class=\\\"navbar-brand fs-1 text-decoration-none\\\"           to={router_names.report}         >",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (90:2) {#each commentData as comment}
+    function create_each_block(ctx) {
+    	let span;
+    	let t0_value = /*comment*/ ctx[11].username + "";
+    	let t0;
+    	let t1;
+    	let div;
+    	let t2_value = /*comment*/ ctx[11].comment + "";
+    	let t2;
+
+    	const block = {
+    		c: function create() {
+    			span = element("span");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			div = element("div");
+    			t2 = text(t2_value);
+    			attr_dev(span, "class", "username");
+    			add_location(span, file$3, 90, 4, 2184);
+    			attr_dev(div, "class", "comments");
+    			add_location(div, file$3, 91, 4, 2237);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, span, anchor);
+    			append_dev(span, t0);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t2);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*commentData*/ 2 && t0_value !== (t0_value = /*comment*/ ctx[11].username + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*commentData*/ 2 && t2_value !== (t2_value = /*comment*/ ctx[11].comment + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(span);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block.name,
+    		type: "each",
+    		source: "(90:2) {#each commentData as comment}",
     		ctx
     	});
 
@@ -4996,7 +5053,7 @@ var app = (function () {
     }
 
     function create_fragment$3(ctx) {
-    	let div1;
+    	let div6;
     	let table;
     	let thead;
     	let tr0;
@@ -5021,14 +5078,45 @@ var app = (function () {
     	let t8;
     	let link;
     	let t9;
+    	let h1;
+    	let t11;
+    	let t12;
+    	let div5;
+    	let form;
+    	let button;
+    	let t14;
     	let div0;
+    	let t15;
+    	let input0;
+    	let t16;
+    	let div1;
+    	let t17_value = /*errors*/ ctx[3].email + "";
+    	let t17;
+    	let t18;
+    	let div2;
+    	let t19;
+    	let input1;
+    	let t20;
+    	let div3;
+    	let t21_value = /*errors*/ ctx[3].username + "";
+    	let t21;
+    	let t22;
+    	let input2;
+    	let t23;
+    	let div4;
+    	let t24_value = /*errors*/ ctx[3].comment + "";
+    	let t24;
+    	let t25;
+    	let toast;
     	let current;
-    	let each_value = /*column_names*/ ctx[1];
-    	validate_each_argument(each_value);
-    	let each_blocks = [];
+    	let mounted;
+    	let dispose;
+    	let each_value_1 = /*column_names*/ ctx[4];
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
 
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
 
     	link = new Link({
@@ -5041,15 +5129,28 @@ var app = (function () {
     			$$inline: true
     		});
 
+    	let each_value = /*commentData*/ ctx[1];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	toast = new Toast({
+    			props: { title: "Comment Added", success: true },
+    			$$inline: true
+    		});
+
     	const block = {
     		c: function create() {
-    			div1 = element("div");
+    			div6 = element("div");
     			table = element("table");
     			thead = element("thead");
     			tr0 = element("tr");
 
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
     			}
 
     			t0 = space();
@@ -5069,37 +5170,99 @@ var app = (function () {
     			t8 = space();
     			create_component(link.$$.fragment);
     			t9 = space();
+    			h1 = element("h1");
+    			h1.textContent = "Comments";
+    			t11 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t12 = space();
+    			div5 = element("div");
+    			form = element("form");
+    			button = element("button");
+    			button.textContent = "Add a comment";
+    			t14 = space();
     			div0 = element("div");
-    			add_location(tr0, file$3, 15, 6, 331);
-    			add_location(thead, file$3, 14, 4, 317);
-    			attr_dev(th0, "class", "svelte-h1ptyv");
-    			add_location(th0, file$3, 23, 8, 477);
-    			attr_dev(th1, "class", "svelte-h1ptyv");
-    			add_location(th1, file$3, 24, 8, 512);
-    			attr_dev(th2, "class", "svelte-h1ptyv");
-    			add_location(th2, file$3, 25, 8, 554);
-    			attr_dev(th3, "class", "svelte-h1ptyv");
-    			add_location(th3, file$3, 26, 8, 596);
-    			add_location(tr1, file$3, 22, 6, 464);
-    			add_location(tbody, file$3, 21, 4, 450);
-    			attr_dev(table, "class", "table table-borderless svelte-h1ptyv");
-    			add_location(table, file$3, 13, 2, 274);
-    			attr_dev(div0, "class", "d-flex justify-content-between");
-    			add_location(div0, file$3, 32, 2, 825);
-    			attr_dev(div1, "class", "body svelte-h1ptyv");
-    			add_location(div1, file$3, 12, 0, 253);
+    			t15 = text("Email:\n        ");
+    			input0 = element("input");
+    			t16 = space();
+    			div1 = element("div");
+    			t17 = text(t17_value);
+    			t18 = space();
+    			div2 = element("div");
+    			t19 = text("Username:\n        ");
+    			input1 = element("input");
+    			t20 = space();
+    			div3 = element("div");
+    			t21 = text(t21_value);
+    			t22 = space();
+    			input2 = element("input");
+    			t23 = space();
+    			div4 = element("div");
+    			t24 = text(t24_value);
+    			t25 = space();
+    			create_component(toast.$$.fragment);
+    			add_location(tr0, file$3, 65, 6, 1569);
+    			add_location(thead, file$3, 64, 4, 1555);
+    			attr_dev(th0, "class", "svelte-1y1ssr2");
+    			add_location(th0, file$3, 73, 8, 1715);
+    			attr_dev(th1, "class", "svelte-1y1ssr2");
+    			add_location(th1, file$3, 74, 8, 1750);
+    			attr_dev(th2, "class", "svelte-1y1ssr2");
+    			add_location(th2, file$3, 75, 8, 1792);
+    			attr_dev(th3, "class", "svelte-1y1ssr2");
+    			add_location(th3, file$3, 76, 8, 1834);
+    			add_location(tr1, file$3, 72, 6, 1702);
+    			add_location(tbody, file$3, 71, 4, 1688);
+    			attr_dev(table, "class", "table table-borderless svelte-1y1ssr2");
+    			add_location(table, file$3, 63, 2, 1512);
+    			attr_dev(h1, "class", "svelte-1y1ssr2");
+    			add_location(h1, file$3, 88, 2, 2129);
+    			attr_dev(button, "class", "btn btn-success svelte-1y1ssr2");
+    			attr_dev(button, "type", "submit");
+    			add_location(button, file$3, 95, 6, 2390);
+    			attr_dev(input0, "class", "input");
+    			attr_dev(input0, "type", "text");
+    			attr_dev(input0, "id", "email-input");
+    			add_location(input0, file$3, 98, 8, 2505);
+    			attr_dev(div0, "id", "email");
+    			add_location(div0, file$3, 96, 6, 2465);
+    			attr_dev(div1, "class", "error");
+    			add_location(div1, file$3, 105, 6, 2651);
+    			attr_dev(input1, "class", "input");
+    			attr_dev(input1, "type", "text");
+    			attr_dev(input1, "id", "username-input");
+    			add_location(input1, file$3, 108, 8, 2743);
+    			attr_dev(div2, "id", "username");
+    			add_location(div2, file$3, 106, 6, 2697);
+    			attr_dev(div3, "class", "error");
+    			add_location(div3, file$3, 115, 6, 2895);
+    			attr_dev(input2, "class", "comment-input");
+    			attr_dev(input2, "type", "text");
+    			attr_dev(input2, "id", "comment-input");
+    			add_location(input2, file$3, 116, 6, 2944);
+    			attr_dev(div4, "class", "error");
+    			add_location(div4, file$3, 122, 6, 3079);
+    			attr_dev(form, "id", "input-area");
+    			add_location(form, file$3, 94, 4, 2320);
+    			attr_dev(div5, "class", "form");
+    			add_location(div5, file$3, 93, 2, 2297);
+    			attr_dev(div6, "class", "body svelte-1y1ssr2");
+    			add_location(div6, file$3, 62, 0, 1491);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, table);
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, table);
     			append_dev(table, thead);
     			append_dev(thead, tr0);
 
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(tr0, null);
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(tr0, null);
     			}
 
     			append_dev(table, t0);
@@ -5118,13 +5281,94 @@ var app = (function () {
     			append_dev(th3, t7);
     			append_dev(tr1, t8);
     			mount_component(link, tr1, null);
-    			append_dev(div1, t9);
-    			append_dev(div1, div0);
+    			append_dev(div6, t9);
+    			append_dev(div6, h1);
+    			append_dev(div6, t11);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div6, null);
+    			}
+
+    			append_dev(div6, t12);
+    			append_dev(div6, div5);
+    			append_dev(div5, form);
+    			append_dev(form, button);
+    			append_dev(form, t14);
+    			append_dev(form, div0);
+    			append_dev(div0, t15);
+    			append_dev(div0, input0);
+    			set_input_value(input0, /*fields*/ ctx[2].email);
+    			append_dev(form, t16);
+    			append_dev(form, div1);
+    			append_dev(div1, t17);
+    			append_dev(form, t18);
+    			append_dev(form, div2);
+    			append_dev(div2, t19);
+    			append_dev(div2, input1);
+    			set_input_value(input1, /*fields*/ ctx[2].username);
+    			append_dev(form, t20);
+    			append_dev(form, div3);
+    			append_dev(div3, t21);
+    			append_dev(form, t22);
+    			append_dev(form, input2);
+    			set_input_value(input2, /*fields*/ ctx[2].comment);
+    			append_dev(form, t23);
+    			append_dev(form, div4);
+    			append_dev(div4, t24);
+    			append_dev(div6, t25);
+    			mount_component(toast, div6, null);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[6]),
+    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[7]),
+    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[8]),
+    					listen_dev(form, "submit", prevent_default(/*submitHandler*/ ctx[5]), false, true, false)
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*column_names*/ 2) {
-    				each_value = /*column_names*/ ctx[1];
+    			if (dirty & /*column_names*/ 16) {
+    				each_value_1 = /*column_names*/ ctx[4];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(tr0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if ((!current || dirty & /*emailData*/ 1) && t1_value !== (t1_value = /*emailData*/ ctx[0].email + "")) set_data_dev(t1, t1_value);
+    			if ((!current || dirty & /*emailData*/ 1) && t3_value !== (t3_value = /*emailData*/ ctx[0].type_of_scam + "")) set_data_dev(t3, t3_value);
+    			if ((!current || dirty & /*emailData*/ 1) && t5_value !== (t5_value = /*emailData*/ ctx[0].report_count + "")) set_data_dev(t5, t5_value);
+    			if ((!current || dirty & /*emailData*/ 1) && t7_value !== (t7_value = /*emailData*/ ctx[0].first + "")) set_data_dev(t7, t7_value);
+    			const link_changes = {};
+
+    			if (dirty & /*$$scope*/ 131072) {
+    				link_changes.$$scope = { dirty, ctx };
+    			}
+
+    			link.$set(link_changes);
+
+    			if (dirty & /*commentData*/ 2) {
+    				each_value = /*commentData*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -5136,7 +5380,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(tr0, null);
+    						each_blocks[i].m(div6, t12);
     					}
     				}
 
@@ -5147,31 +5391,43 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if ((!current || dirty & /*emailData*/ 1) && t1_value !== (t1_value = /*emailData*/ ctx[0].email + "")) set_data_dev(t1, t1_value);
-    			if ((!current || dirty & /*emailData*/ 1) && t3_value !== (t3_value = /*emailData*/ ctx[0].type_of_scam + "")) set_data_dev(t3, t3_value);
-    			if ((!current || dirty & /*emailData*/ 1) && t5_value !== (t5_value = /*emailData*/ ctx[0].report_count + "")) set_data_dev(t5, t5_value);
-    			if ((!current || dirty & /*emailData*/ 1) && t7_value !== (t7_value = /*emailData*/ ctx[0].first + "")) set_data_dev(t7, t7_value);
-    			const link_changes = {};
-
-    			if (dirty & /*$$scope*/ 32) {
-    				link_changes.$$scope = { dirty, ctx };
+    			if (dirty & /*fields*/ 4 && input0.value !== /*fields*/ ctx[2].email) {
+    				set_input_value(input0, /*fields*/ ctx[2].email);
     			}
 
-    			link.$set(link_changes);
+    			if ((!current || dirty & /*errors*/ 8) && t17_value !== (t17_value = /*errors*/ ctx[3].email + "")) set_data_dev(t17, t17_value);
+
+    			if (dirty & /*fields*/ 4 && input1.value !== /*fields*/ ctx[2].username) {
+    				set_input_value(input1, /*fields*/ ctx[2].username);
+    			}
+
+    			if ((!current || dirty & /*errors*/ 8) && t21_value !== (t21_value = /*errors*/ ctx[3].username + "")) set_data_dev(t21, t21_value);
+
+    			if (dirty & /*fields*/ 4 && input2.value !== /*fields*/ ctx[2].comment) {
+    				set_input_value(input2, /*fields*/ ctx[2].comment);
+    			}
+
+    			if ((!current || dirty & /*errors*/ 8) && t24_value !== (t24_value = /*errors*/ ctx[3].comment + "")) set_data_dev(t24, t24_value);
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(link.$$.fragment, local);
+    			transition_in(toast.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(link.$$.fragment, local);
+    			transition_out(toast.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
-    			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(div6);
+    			destroy_each(each_blocks_1, detaching);
     			destroy_component(link);
+    			destroy_each(each_blocks, detaching);
+    			destroy_component(toast);
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
 
@@ -5190,40 +5446,125 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Emails', slots, []);
     	let { emailData = "" } = $$props;
+    	let { commentData = "" } = $$props;
     	const column_names = ["Email", "Type of Scam", "Number of Reports", "First Occurance"];
-    	const writable_props = ['emailData'];
+    	let fields = { email: "", username: "", comment: "" };
+    	let errors = { email: "", username: "", comment: "" };
+    	let valid = false;
+
+    	const submitHandler = () => {
+    		valid = true;
+
+    		//Email field
+    		if (fields.email.trim().length == 0) {
+    			$$invalidate(2, fields.email = "Anonymous", fields);
+    		}
+
+    		//username field
+    		if (fields.username.trim().length == 0) {
+    			$$invalidate(2, fields.username = "Anonymous", fields);
+    		}
+
+    		//Comments field
+    		if (fields.comment.length == 0) {
+    			valid = false;
+    			$$invalidate(3, errors.comment = "Comment can not be left empty", errors);
+    		} else {
+    			$$invalidate(3, errors.comment = "", errors);
+    		}
+
+    		if (valid) {
+    			submitFields();
+    		}
+    	};
+
+    	function submitFields() {
+    		for (let i = 0; i < commentData.length; i++) {
+    			//If the scam email is not reported
+    			const newData = {
+    				username: fields.username,
+    				email: fields.email,
+    				comment: fields.comment
+    			};
+
+    			commentData.push(newData);
+    			var toastLiveExample = document.getElementById("liveToastSuccess");
+    			var toast = new bootstrap.Toast(toastLiveExample);
+    			toast.show();
+    			$$invalidate(2, fields = { email: "", username: "", comment: "" });
+    		}
+    	}
+
+    	const writable_props = ['emailData', 'commentData'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Emails> was created with unknown prop '${key}'`);
     	});
 
+    	function input0_input_handler() {
+    		fields.email = this.value;
+    		$$invalidate(2, fields);
+    	}
+
+    	function input1_input_handler() {
+    		fields.username = this.value;
+    		$$invalidate(2, fields);
+    	}
+
+    	function input2_input_handler() {
+    		fields.comment = this.value;
+    		$$invalidate(2, fields);
+    	}
+
     	$$self.$$set = $$props => {
     		if ('emailData' in $$props) $$invalidate(0, emailData = $$props.emailData);
+    		if ('commentData' in $$props) $$invalidate(1, commentData = $$props.commentData);
     	};
 
     	$$self.$capture_state = () => ({
     		router_names,
     		navigate,
     		Link,
+    		Toast,
     		emailData,
-    		column_names
+    		commentData,
+    		column_names,
+    		fields,
+    		errors,
+    		valid,
+    		submitHandler,
+    		submitFields
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('emailData' in $$props) $$invalidate(0, emailData = $$props.emailData);
+    		if ('commentData' in $$props) $$invalidate(1, commentData = $$props.commentData);
+    		if ('fields' in $$props) $$invalidate(2, fields = $$props.fields);
+    		if ('errors' in $$props) $$invalidate(3, errors = $$props.errors);
+    		if ('valid' in $$props) valid = $$props.valid;
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [emailData, column_names];
+    	return [
+    		emailData,
+    		commentData,
+    		fields,
+    		errors,
+    		column_names,
+    		submitHandler,
+    		input0_input_handler,
+    		input1_input_handler,
+    		input2_input_handler
+    	];
     }
 
     class Emails extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { emailData: 0 });
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { emailData: 0, commentData: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -5240,6 +5581,14 @@ var app = (function () {
     	set emailData(value) {
     		throw new Error("<Emails>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get commentData() {
+    		throw new Error("<Emails>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set commentData(value) {
+    		throw new Error("<Emails>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src/Email.svelte generated by Svelte v3.47.0 */
@@ -5251,17 +5600,22 @@ var app = (function () {
     	let t;
     	let emails;
     	let updating_emailData;
+    	let updating_commentData;
     	let current;
 
     	header = new Header({
     			props: {
-    				current: "" + (router_names.email + "/" + /*id*/ ctx[1])
+    				current: "" + (router_names.email + "/" + /*id*/ ctx[2])
     			},
     			$$inline: true
     		});
 
     	function emails_emailData_binding(value) {
-    		/*emails_emailData_binding*/ ctx[2](value);
+    		/*emails_emailData_binding*/ ctx[3](value);
+    	}
+
+    	function emails_commentData_binding(value) {
+    		/*emails_commentData_binding*/ ctx[4](value);
     	}
 
     	let emails_props = {};
@@ -5270,8 +5624,13 @@ var app = (function () {
     		emails_props.emailData = /*emailData*/ ctx[0];
     	}
 
+    	if (/*commentData*/ ctx[1] !== void 0) {
+    		emails_props.commentData = /*commentData*/ ctx[1];
+    	}
+
     	emails = new Emails({ props: emails_props, $$inline: true });
     	binding_callbacks.push(() => bind(emails, 'emailData', emails_emailData_binding));
+    	binding_callbacks.push(() => bind(emails, 'commentData', emails_commentData_binding));
 
     	const block = {
     		c: function create() {
@@ -5279,7 +5638,7 @@ var app = (function () {
     			create_component(header.$$.fragment);
     			t = space();
     			create_component(emails.$$.fragment);
-    			add_location(div, file$2, 11, 0, 335);
+    			add_location(div, file$2, 12, 0, 386);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5293,7 +5652,7 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			const header_changes = {};
-    			if (dirty & /*id*/ 2) header_changes.current = "" + (router_names.email + "/" + /*id*/ ctx[1]);
+    			if (dirty & /*id*/ 4) header_changes.current = "" + (router_names.email + "/" + /*id*/ ctx[2]);
     			header.$set(header_changes);
     			const emails_changes = {};
 
@@ -5301,6 +5660,12 @@ var app = (function () {
     				updating_emailData = true;
     				emails_changes.emailData = /*emailData*/ ctx[0];
     				add_flush_callback(() => updating_emailData = false);
+    			}
+
+    			if (!updating_commentData && dirty & /*commentData*/ 2) {
+    				updating_commentData = true;
+    				emails_changes.commentData = /*commentData*/ ctx[1];
+    				add_flush_callback(() => updating_commentData = false);
     			}
 
     			emails.$set(emails_changes);
@@ -5339,7 +5704,8 @@ var app = (function () {
     	validate_slots('Email', slots, []);
     	let { id = "" } = $$props;
     	let { emailData = data.find(d => d.id == id) } = $$props;
-    	const writable_props = ['id', 'emailData'];
+    	let { commentData = emailData.commentLog } = $$props;
+    	const writable_props = ['id', 'emailData', 'commentData'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Email> was created with unknown prop '${key}'`);
@@ -5350,9 +5716,15 @@ var app = (function () {
     		$$invalidate(0, emailData);
     	}
 
+    	function emails_commentData_binding(value) {
+    		commentData = value;
+    		$$invalidate(1, commentData);
+    	}
+
     	$$self.$$set = $$props => {
-    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
+    		if ('id' in $$props) $$invalidate(2, id = $$props.id);
     		if ('emailData' in $$props) $$invalidate(0, emailData = $$props.emailData);
+    		if ('commentData' in $$props) $$invalidate(1, commentData = $$props.commentData);
     	};
 
     	$$self.$capture_state = () => ({
@@ -5361,25 +5733,33 @@ var app = (function () {
     		Header,
     		Emails,
     		id,
-    		emailData
+    		emailData,
+    		commentData
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('id' in $$props) $$invalidate(1, id = $$props.id);
+    		if ('id' in $$props) $$invalidate(2, id = $$props.id);
     		if ('emailData' in $$props) $$invalidate(0, emailData = $$props.emailData);
+    		if ('commentData' in $$props) $$invalidate(1, commentData = $$props.commentData);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [emailData, id, emails_emailData_binding];
+    	return [
+    		emailData,
+    		commentData,
+    		id,
+    		emails_emailData_binding,
+    		emails_commentData_binding
+    	];
     }
 
     class Email extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { id: 1, emailData: 0 });
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { id: 2, emailData: 0, commentData: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -5402,6 +5782,14 @@ var app = (function () {
     	}
 
     	set emailData(value) {
+    		throw new Error("<Email>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get commentData() {
+    		throw new Error("<Email>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set commentData(value) {
     		throw new Error("<Email>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
