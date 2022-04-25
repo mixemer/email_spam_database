@@ -1,13 +1,14 @@
 <script>
     import { data } from "../dummy_data";
-    import { scam_types } from "../globals";
+    import { scam_types, sounds } from "../globals";
     import Toast from "./Toast.svelte"
 
     let fields = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     let errors = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     let valid = false;
 
-    //Reminder to edit button
+    var successSound = new Audio(sounds.success)
+    var errorSound = new Audio(sounds.error)
 
     const submitHandler = () => {
         valid = true;
@@ -46,6 +47,8 @@
 
         if (valid) {
             submitFields();
+        } else {
+            errorSound.play();
         }
     }
 
@@ -65,6 +68,7 @@
         var toastLiveExample = document.getElementById('liveToastSuccess')
         var toast = new bootstrap.Toast(toastLiveExample)
         toast.show()
+        successSound.play()
         
         fields = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     }
