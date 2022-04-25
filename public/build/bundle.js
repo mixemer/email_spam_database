@@ -4944,8 +4944,8 @@ var app = (function () {
     			td = element("td");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(td, "class", "svelte-1y1ssr2");
-    			add_location(td, file$3, 67, 10, 1623);
+    			attr_dev(td, "class", "svelte-48sjpn");
+    			add_location(td, file$3, 67, 10, 1578);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, td, anchor);
@@ -4977,9 +4977,9 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			button.textContent = "+ Report";
-    			attr_dev(button, "class", "btn btn-success svelte-1y1ssr2");
+    			attr_dev(button, "class", "btn btn-success svelte-48sjpn");
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$3, 81, 10, 1987);
+    			add_location(button, file$3, 81, 10, 1942);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -5001,43 +5001,55 @@ var app = (function () {
     	return block;
     }
 
-    // (90:2) {#each commentData as comment}
+    // (91:4) {#each commentData as comment}
     function create_each_block(ctx) {
-    	let span;
+    	let div0;
+    	let span0;
     	let t0_value = /*comment*/ ctx[11].username + "";
     	let t0;
     	let t1;
-    	let div;
+    	let div1;
+    	let span1;
     	let t2_value = /*comment*/ ctx[11].comment + "";
     	let t2;
+    	let t3;
 
     	const block = {
     		c: function create() {
-    			span = element("span");
+    			div0 = element("div");
+    			span0 = element("span");
     			t0 = text(t0_value);
     			t1 = space();
-    			div = element("div");
+    			div1 = element("div");
+    			span1 = element("span");
     			t2 = text(t2_value);
-    			attr_dev(span, "class", "username");
-    			add_location(span, file$3, 90, 4, 2184);
-    			attr_dev(div, "class", "comments");
-    			add_location(div, file$3, 91, 4, 2237);
+    			t3 = space();
+    			attr_dev(span0, "class", "btn btn-primary svelte-48sjpn");
+    			add_location(span0, file$3, 91, 11, 2215);
+    			add_location(div0, file$3, 91, 6, 2210);
+    			attr_dev(span1, "id", "comments");
+    			attr_dev(span1, "class", "btn btn-primary svelte-48sjpn");
+    			add_location(span1, file$3, 93, 8, 2297);
+    			add_location(div1, file$3, 92, 6, 2283);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, span, anchor);
-    			append_dev(span, t0);
+    			insert_dev(target, div0, anchor);
+    			append_dev(div0, span0);
+    			append_dev(span0, t0);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, div, anchor);
-    			append_dev(div, t2);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, span1);
+    			append_dev(span1, t2);
+    			append_dev(div1, t3);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*commentData*/ 2 && t0_value !== (t0_value = /*comment*/ ctx[11].username + "")) set_data_dev(t0, t0_value);
     			if (dirty & /*commentData*/ 2 && t2_value !== (t2_value = /*comment*/ ctx[11].comment + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(span);
+    			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div1);
     		}
     	};
 
@@ -5045,7 +5057,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(90:2) {#each commentData as comment}",
+    		source: "(91:4) {#each commentData as comment}",
     		ctx
     	});
 
@@ -5053,7 +5065,7 @@ var app = (function () {
     }
 
     function create_fragment$3(ctx) {
-    	let div6;
+    	let div8;
     	let table;
     	let thead;
     	let tr0;
@@ -5080,33 +5092,37 @@ var app = (function () {
     	let t9;
     	let h1;
     	let t11;
+    	let div0;
     	let t12;
-    	let div5;
+    	let div7;
     	let form;
     	let button;
     	let t14;
-    	let div0;
+    	let div4;
+    	let div1;
     	let t15;
     	let input0;
     	let t16;
-    	let div1;
+    	let div2;
     	let t17_value = /*errors*/ ctx[3].email + "";
     	let t17;
     	let t18;
-    	let div2;
+    	let div3;
     	let t19;
     	let input1;
     	let t20;
-    	let div3;
+    	let div5;
     	let t21_value = /*errors*/ ctx[3].username + "";
     	let t21;
     	let t22;
-    	let input2;
-    	let t23;
-    	let div4;
-    	let t24_value = /*errors*/ ctx[3].comment + "";
+    	let label;
     	let t24;
+    	let input2;
     	let t25;
+    	let div6;
+    	let t26_value = /*errors*/ ctx[3].comment + "";
+    	let t26;
+    	let t27;
     	let toast;
     	let current;
     	let mounted;
@@ -5144,7 +5160,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div6 = element("div");
+    			div8 = element("div");
     			table = element("table");
     			thead = element("thead");
     			tr0 = element("tr");
@@ -5173,91 +5189,105 @@ var app = (function () {
     			h1 = element("h1");
     			h1.textContent = "Comments";
     			t11 = space();
+    			div0 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
     			t12 = space();
-    			div5 = element("div");
+    			div7 = element("div");
     			form = element("form");
     			button = element("button");
     			button.textContent = "Add a comment";
     			t14 = space();
-    			div0 = element("div");
-    			t15 = text("Email:\n        ");
+    			div4 = element("div");
+    			div1 = element("div");
+    			t15 = text("Email:\n          ");
     			input0 = element("input");
     			t16 = space();
-    			div1 = element("div");
+    			div2 = element("div");
     			t17 = text(t17_value);
     			t18 = space();
-    			div2 = element("div");
-    			t19 = text("Username:\n        ");
+    			div3 = element("div");
+    			t19 = text("Username:\n          ");
     			input1 = element("input");
     			t20 = space();
-    			div3 = element("div");
+    			div5 = element("div");
     			t21 = text(t21_value);
     			t22 = space();
+    			label = element("label");
+    			label.textContent = "Comments: (required)";
+    			t24 = space();
     			input2 = element("input");
-    			t23 = space();
-    			div4 = element("div");
-    			t24 = text(t24_value);
     			t25 = space();
+    			div6 = element("div");
+    			t26 = text(t26_value);
+    			t27 = space();
     			create_component(toast.$$.fragment);
-    			add_location(tr0, file$3, 65, 6, 1569);
-    			add_location(thead, file$3, 64, 4, 1555);
-    			attr_dev(th0, "class", "svelte-1y1ssr2");
-    			add_location(th0, file$3, 73, 8, 1715);
-    			attr_dev(th1, "class", "svelte-1y1ssr2");
-    			add_location(th1, file$3, 74, 8, 1750);
-    			attr_dev(th2, "class", "svelte-1y1ssr2");
-    			add_location(th2, file$3, 75, 8, 1792);
-    			attr_dev(th3, "class", "svelte-1y1ssr2");
-    			add_location(th3, file$3, 76, 8, 1834);
-    			add_location(tr1, file$3, 72, 6, 1702);
-    			add_location(tbody, file$3, 71, 4, 1688);
-    			attr_dev(table, "class", "table table-borderless svelte-1y1ssr2");
-    			add_location(table, file$3, 63, 2, 1512);
-    			attr_dev(h1, "class", "svelte-1y1ssr2");
-    			add_location(h1, file$3, 88, 2, 2129);
-    			attr_dev(button, "class", "btn btn-success svelte-1y1ssr2");
+    			add_location(tr0, file$3, 65, 6, 1524);
+    			add_location(thead, file$3, 64, 4, 1510);
+    			attr_dev(th0, "class", "svelte-48sjpn");
+    			add_location(th0, file$3, 73, 8, 1670);
+    			attr_dev(th1, "class", "svelte-48sjpn");
+    			add_location(th1, file$3, 74, 8, 1705);
+    			attr_dev(th2, "class", "svelte-48sjpn");
+    			add_location(th2, file$3, 75, 8, 1747);
+    			attr_dev(th3, "class", "svelte-48sjpn");
+    			add_location(th3, file$3, 76, 8, 1789);
+    			add_location(tr1, file$3, 72, 6, 1657);
+    			add_location(tbody, file$3, 71, 4, 1643);
+    			attr_dev(table, "class", "table table-borderless svelte-48sjpn");
+    			add_location(table, file$3, 63, 2, 1467);
+    			attr_dev(h1, "class", "svelte-48sjpn");
+    			add_location(h1, file$3, 88, 2, 2084);
+    			attr_dev(div0, "id", "com_container");
+    			attr_dev(div0, "class", "overflow-scroll card sticky-top svelte-48sjpn");
+    			add_location(div0, file$3, 89, 2, 2104);
+    			attr_dev(button, "class", "btn btn-success comment_button svelte-48sjpn");
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$3, 95, 6, 2390);
-    			attr_dev(input0, "class", "input");
+    			add_location(button, file$3, 99, 6, 2504);
+    			attr_dev(input0, "class", "input svelte-48sjpn");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "id", "email-input");
-    			add_location(input0, file$3, 98, 8, 2505);
-    			attr_dev(div0, "id", "email");
-    			add_location(div0, file$3, 96, 6, 2465);
-    			attr_dev(div1, "class", "error");
-    			add_location(div1, file$3, 105, 6, 2651);
-    			attr_dev(input1, "class", "input");
+    			add_location(input0, file$3, 105, 10, 2686);
+    			attr_dev(div1, "id", "email");
+    			add_location(div1, file$3, 103, 8, 2642);
+    			attr_dev(div2, "class", "error svelte-48sjpn");
+    			add_location(div2, file$3, 112, 8, 2846);
+    			attr_dev(input1, "class", "input svelte-48sjpn");
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "id", "username-input");
-    			add_location(input1, file$3, 108, 8, 2743);
-    			attr_dev(div2, "id", "username");
-    			add_location(div2, file$3, 106, 6, 2697);
-    			attr_dev(div3, "class", "error");
-    			add_location(div3, file$3, 115, 6, 2895);
-    			attr_dev(input2, "class", "comment-input");
+    			add_location(input1, file$3, 115, 10, 2944);
+    			attr_dev(div3, "id", "username");
+    			attr_dev(div3, "class", "svelte-48sjpn");
+    			add_location(div3, file$3, 113, 8, 2894);
+    			attr_dev(div4, "class", "container svelte-48sjpn");
+    			add_location(div4, file$3, 102, 6, 2610);
+    			attr_dev(div5, "class", "error svelte-48sjpn");
+    			add_location(div5, file$3, 123, 6, 3121);
+    			attr_dev(label, "for", "comment-input");
+    			attr_dev(label, "class", "svelte-48sjpn");
+    			add_location(label, file$3, 124, 6, 3170);
+    			attr_dev(input2, "class", "comment-input svelte-48sjpn");
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "id", "comment-input");
-    			add_location(input2, file$3, 116, 6, 2944);
-    			attr_dev(div4, "class", "error");
-    			add_location(div4, file$3, 122, 6, 3079);
+    			add_location(input2, file$3, 125, 6, 3234);
+    			attr_dev(div6, "class", "error svelte-48sjpn");
+    			add_location(div6, file$3, 131, 6, 3369);
     			attr_dev(form, "id", "input-area");
-    			add_location(form, file$3, 94, 4, 2320);
-    			attr_dev(div5, "class", "form");
-    			add_location(div5, file$3, 93, 2, 2297);
-    			attr_dev(div6, "class", "body svelte-1y1ssr2");
-    			add_location(div6, file$3, 62, 0, 1491);
+    			add_location(form, file$3, 98, 4, 2434);
+    			attr_dev(div7, "class", "formContainer svelte-48sjpn");
+    			add_location(div7, file$3, 97, 2, 2402);
+    			attr_dev(div8, "class", "body svelte-48sjpn");
+    			add_location(div8, file$3, 62, 0, 1446);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div6, anchor);
-    			append_dev(div6, table);
+    			insert_dev(target, div8, anchor);
+    			append_dev(div8, table);
     			append_dev(table, thead);
     			append_dev(thead, tr0);
 
@@ -5281,42 +5311,46 @@ var app = (function () {
     			append_dev(th3, t7);
     			append_dev(tr1, t8);
     			mount_component(link, tr1, null);
-    			append_dev(div6, t9);
-    			append_dev(div6, h1);
-    			append_dev(div6, t11);
+    			append_dev(div8, t9);
+    			append_dev(div8, h1);
+    			append_dev(div8, t11);
+    			append_dev(div8, div0);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div6, null);
+    				each_blocks[i].m(div0, null);
     			}
 
-    			append_dev(div6, t12);
-    			append_dev(div6, div5);
-    			append_dev(div5, form);
+    			append_dev(div8, t12);
+    			append_dev(div8, div7);
+    			append_dev(div7, form);
     			append_dev(form, button);
     			append_dev(form, t14);
-    			append_dev(form, div0);
-    			append_dev(div0, t15);
-    			append_dev(div0, input0);
+    			append_dev(form, div4);
+    			append_dev(div4, div1);
+    			append_dev(div1, t15);
+    			append_dev(div1, input0);
     			set_input_value(input0, /*fields*/ ctx[2].email);
-    			append_dev(form, t16);
-    			append_dev(form, div1);
-    			append_dev(div1, t17);
-    			append_dev(form, t18);
-    			append_dev(form, div2);
-    			append_dev(div2, t19);
-    			append_dev(div2, input1);
+    			append_dev(div4, t16);
+    			append_dev(div4, div2);
+    			append_dev(div2, t17);
+    			append_dev(div4, t18);
+    			append_dev(div4, div3);
+    			append_dev(div3, t19);
+    			append_dev(div3, input1);
     			set_input_value(input1, /*fields*/ ctx[2].username);
     			append_dev(form, t20);
-    			append_dev(form, div3);
-    			append_dev(div3, t21);
+    			append_dev(form, div5);
+    			append_dev(div5, t21);
     			append_dev(form, t22);
+    			append_dev(form, label);
+    			append_dev(form, t24);
     			append_dev(form, input2);
     			set_input_value(input2, /*fields*/ ctx[2].comment);
-    			append_dev(form, t23);
-    			append_dev(form, div4);
-    			append_dev(div4, t24);
-    			append_dev(div6, t25);
-    			mount_component(toast, div6, null);
+    			append_dev(form, t25);
+    			append_dev(form, div6);
+    			append_dev(div6, t26);
+    			append_dev(div8, t27);
+    			mount_component(toast, div8, null);
     			current = true;
 
     			if (!mounted) {
@@ -5380,7 +5414,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(div6, t12);
+    						each_blocks[i].m(div0, null);
     					}
     				}
 
@@ -5407,7 +5441,7 @@ var app = (function () {
     				set_input_value(input2, /*fields*/ ctx[2].comment);
     			}
 
-    			if ((!current || dirty & /*errors*/ 8) && t24_value !== (t24_value = /*errors*/ ctx[3].comment + "")) set_data_dev(t24, t24_value);
+    			if ((!current || dirty & /*errors*/ 8) && t26_value !== (t26_value = /*errors*/ ctx[3].comment + "")) set_data_dev(t26, t26_value);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -5421,7 +5455,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div6);
+    			if (detaching) detach_dev(div8);
     			destroy_each(each_blocks_1, detaching);
     			destroy_component(link);
     			destroy_each(each_blocks, detaching);
@@ -5468,7 +5502,7 @@ var app = (function () {
     		//Comments field
     		if (fields.comment.length == 0) {
     			valid = false;
-    			$$invalidate(3, errors.comment = "Comment can not be left empty", errors);
+    			$$invalidate(3, errors.comment = "Comment can not be left empty!!", errors);
     		} else {
     			$$invalidate(3, errors.comment = "", errors);
     		}
@@ -5479,20 +5513,18 @@ var app = (function () {
     	};
 
     	function submitFields() {
-    		for (let i = 0; i < commentData.length; i++) {
-    			//If the scam email is not reported
-    			const newData = {
-    				username: fields.username,
-    				email: fields.email,
-    				comment: fields.comment
-    			};
+    		//If the scam email is not reported
+    		const newData = {
+    			username: fields.username,
+    			email: fields.email,
+    			comment: fields.comment
+    		};
 
-    			commentData.push(newData);
-    			var toastLiveExample = document.getElementById("liveToastSuccess");
-    			var toast = new bootstrap.Toast(toastLiveExample);
-    			toast.show();
-    			$$invalidate(2, fields = { email: "", username: "", comment: "" });
-    		}
+    		commentData.push(newData);
+    		var toastLiveExample = document.getElementById("liveToastSuccess");
+    		var toast = new bootstrap.Toast(toastLiveExample);
+    		toast.show();
+    		$$invalidate(2, fields = { email: "", username: "", comment: "" });
     	}
 
     	const writable_props = ['emailData', 'commentData'];
