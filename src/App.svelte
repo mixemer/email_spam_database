@@ -9,7 +9,7 @@
 	import NotFound from "./NotFound.svelte";
 
 	// TODO: make it "" later, for now "/" works for github pages
-	export let url = "";
+	export let url = "/";
 	console.log(window.location.href)
 </script>
 
