@@ -2,9 +2,15 @@
   import { router_names, sounds } from "../globals";
   import { navigate, Link } from "svelte-routing";
   import { Anonymous } from "../globals"
+  import { data } from "../dummy_data"
+  
+  import { fade } from 'svelte/transition';
+
   import Toast from "./Toast.svelte";
-  export let emailData = "";
-  export let commentData = "";
+
+  export let id;
+  export let emailData;
+  export let commentData;
 
   var successSound = new Audio(sounds.success)
   var warningSound = new Audio(sounds.warning)
@@ -31,7 +37,7 @@
     }
 
     //Comments field
-    if (fields.comment.length == 0) {
+    if (fields.comment.trim().length == 0) {
       valid = false;
       errors.comment = "Comment can not be left empty!!";
     } else {
@@ -47,11 +53,19 @@
     
       //If the scam email is not reported
       const newData = {
+        id: Math.random().toString(16).slice(2),
         username: fields.username,
         email: fields.email,
         comment: fields.comment,
       };
-      commentData.push(newData);
+      // commentData.push(newData);
+      commentData = [newData, ...commentData]
+      const index = data.findIndex(d => d.id === parseInt(id));
+      if (index !== -1) {
+        data[index].commentLog = commentData
+      }
+      console.log(newData)
+
 
       var toastLiveExample = document.getElementById("liveToastSuccess");
       var toast = new bootstrap.Toast(toastLiveExample);
@@ -59,8 +73,8 @@
       successSound.play();
 
       fields = {
-        email: "",
-        username: "",
+        email: Anonymous,
+        username: Anonymous,
         comment: "",
       };
     }
@@ -93,12 +107,14 @@
       </tr>
     </tbody>
   </table>
-  <h1>Comments</h1>
+  <h4>Comments</h4>
   <div id="com_container" class="overflow-scroll card sticky-top">
-    {#each commentData as comment}
-      <div><span class="btn btn-primary">{comment.username}</span></div>
+    {#each commentData as comment (comment.id)}
+      <div in:fade >
+        <div><span class="btn btn-primary" >{comment.username}</span></div>
       <div>
         <span id="comments" class="btn btn-primary">{comment.comment}</span>
+      </div>
       </div>
     {/each}
   </div>
@@ -156,7 +172,7 @@
     color: white;
     font-size: 16px;
   }
-  h1 {
+  h4 {
     position: relative;
     left: 60px;
   }
