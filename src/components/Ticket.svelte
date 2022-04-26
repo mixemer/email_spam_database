@@ -1,9 +1,9 @@
 <script>
     import { data } from "../dummy_data";
-    import { scam_types, sounds } from "../globals";
+    import { scam_types, sounds, Anonymous } from "../globals";
     import Toast from "./Toast.svelte"
 
-    let fields = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
+    let fields = { nameVar: Anonymous, email: Anonymous, scam_email: '', type_of_scam: '', info: '', }
     let errors = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     let valid = false;
 
