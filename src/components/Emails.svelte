@@ -127,7 +127,7 @@
         <div id="email">
           Email:
           <input
-            class="input"
+            class="input text-white"
             type="text"
             id="email-input"
             bind:value={fields.email}
@@ -137,7 +137,7 @@
         <div id="username">
           Username:
           <input
-            class="input"
+            class="input text-white"
             type="text"
             id="username-input"
             bind:value={fields.username}
@@ -146,8 +146,8 @@
       </div>
       <div class="error">{errors.username}</div>
       <label for="comment-input"> Comments: (required) </label>
-      <input
-        class="comment-input"
+      <textarea
+        class="comment-input text-white"
         type="text"
         id="comment-input"
         bind:value={fields.comment}
@@ -275,7 +275,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 200;
   }
-  input {
+  input, textarea {
     margin-left: 4px;
     margin-right: 3px;
     margin-top: 10px;
