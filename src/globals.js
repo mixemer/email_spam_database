@@ -5,6 +5,8 @@ export const router_names = {
     email: "email"
 }
 
+export const Anonymous = "Anonymous"
+
 /*
 Seached on these websites.
 https://www.atg.wa.gov/5-common-e-mail-scams
