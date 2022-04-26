@@ -91,7 +91,7 @@
       </table>
 
       {#if results.length === 0}
-          <h1 class="text-center"> No Email Found </h1>
+          <h1 class="text-center text-white"> No Email Found </h1>
       {/if}
 
       <div class="d-flex justify-content-between">
