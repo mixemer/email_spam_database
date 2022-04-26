@@ -110,3 +110,34 @@ export var sounds = {
     // path to sound for error message:
     error: "https://res.cloudinary.com/dxfq3iotg/video/upload/v1557233574/error.mp3",
 };
+
+export const FAQ = [
+    {
+        question: "What is a scam email?",
+        answer: "A scam email is a deceiving email that tries to steal your information."
+    },
+    {
+        question: "What is a phishing email and how is it related to scam emails?",
+        answer: "A phishing email is a type of scam sent by another person disguising as a legitimate, trustworthy source.",
+    },
+    {
+        question: "How do I search for a scam email?",
+        answer: "Start typing in the search bar on the home page. It will trim the table and will find your email. If it does not exist, you can report the email (See the next 2 questions).",
+    },
+    {
+        question: "How do I add a report to an existing entry in the table?",
+        answer: "Click “Report” at the top right of the page. Insert your name, email, the scam email, and the scam type, then press the “Send” button. The number of reports will go up.",
+    },
+    {
+        question: "The email I searched for does not exist in the table or the scam type is different. How do I add it?",
+        answer: "Click “Report” at the top right of the page. Insert your name, email, the scam email, and the scam type, then press the “Send” button. This will create a new table entry with 1 report and 0 comments.",
+    },
+    {
+        question: "Where do I access the comments for a scam email?",
+        answer: "Click on the email that you searched up inside the table on the home page. This should bring you to the comments page.",
+    },
+    {
+        question: "How do I add a comment?",
+        answer: "Inside the comments page of a particular email, you can add a comment in the bottom right.",
+    },
+]
