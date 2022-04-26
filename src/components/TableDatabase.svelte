@@ -57,8 +57,8 @@
     }
 </script>
 
-<div class="body">
-    <table class="table table-bordered table-hover table-striped">
+<div class="body p-3 rounded">
+    <table class="table table-bordered">
         <thead>
           <tr>
               {#each column_names as column, i}
@@ -121,6 +121,13 @@
 <style>
 .body {
     padding: 0 3rem;
+    background-color: #2b6777;
+}
+table {
+    color: white;
+}
+tr:hover {
+    background-color: #266e82;
 }
 @media (max-width: 978px) {
     .body {

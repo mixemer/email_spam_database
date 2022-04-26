@@ -21,7 +21,7 @@
 	}
 </script>
 
-<div class="header bg-light">
+<div class="header">
 	<nav class="navbar navbar-expand-lg navbar-light ">
 		<div class="container-fluid">
 		  <Link class="navbar-brand fs-1 text-decoration-none" to="{router_names.home}" on:click={() => current = router_names.home}>Scam Email Finder </Link>
@@ -74,7 +74,10 @@
 }
 .header {
     padding: 0 2rem;
+	/* background-color: #2b6777;
+	color: white; */
 }
+
 @media (max-width: 978px) {
     .header {
       padding:0;
