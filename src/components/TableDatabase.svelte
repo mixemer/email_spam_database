@@ -2,6 +2,8 @@
     import { navigate, Link } from "svelte-routing";
     import { data } from "../dummy_data";
     import { router_names } from "../globals"
+    import { fade } from 'svelte/transition';
+
 
     let shown_rows = 10;
     $: current_page = search_email.trim() === '' ? 1 : 1;
@@ -76,8 +78,8 @@
         </thead>
 
         <tbody>
-            {#each results as result, i}
-                <tr class="clickable" on:click={() => onClickEmail(result.id)}>
+            {#each results as result, i (result.id)}
+                <tr in:fade class="clickable" on:click={() => onClickEmail(result.id)}>
                     <td>{i+1}</td>
                     <td>{result.email}</td>
                     <td>{result.type_of_scam}</td>
