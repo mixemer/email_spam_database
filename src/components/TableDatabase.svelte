@@ -3,13 +3,26 @@
     import { data } from "../dummy_data";
     import { router_names } from "../globals"
     import { fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
-
+    export let hereFirstTime = false
     let shown_rows = 10;
     $: current_page = search_email.trim() === '' ? 1 : 1;
     $: max_page_count = Math.ceil(filtered_data.length / shown_rows);
     export let search_email = '';
+    let loading = true
 
+    onMount(async () => {
+        let wait = 0
+        if (hereFirstTime) {
+            wait = 500
+        }else {
+            loading = false
+        }
+        setTimeout(function(){
+            loading = false
+        }, wait);
+	});
 	
     $: filtered_data = data.filter(thing => thing.email.toLowerCase().startsWith(search_email.trim().toLowerCase())).sort(sort);
 	$: results = filtered_data.slice((current_page - 1) * shown_rows, current_page * shown_rows);
@@ -59,7 +72,14 @@
     }
 </script>
 
-<div class="body p-3 rounded">
+  <div class="body p-3 rounded">
+    {#if loading}
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+        </div>
+        <br>
+    {/if}
+    
     <table class="table table-bordered">
         <thead>
           <tr>
@@ -78,7 +98,8 @@
         </thead>
 
         <tbody>
-            {#each results as result, i (result.id)}
+            {#if !loading}
+                {#each results as result, i (result.id)}
                 <tr in:fade class="clickable" on:click={() => onClickEmail(result.id)}>
                     <td>{i+1}</td>
                     <td>{result.email}</td>
@@ -88,7 +109,8 @@
                     <td>{result.comments}</td>
                     <td> <i class="fa-solid fa-angle-right"></i> </td>
                 </tr>
-            {/each}
+                {/each}
+            {/if}
         </tbody>
       </table>
 
