@@ -1,6 +1,7 @@
 <script>
   import { router_names, sounds } from "../globals";
   import { navigate, Link } from "svelte-routing";
+  import { Anonymous } from "../globals"
   import Toast from "./Toast.svelte";
   export let emailData = "";
   export let commentData = "";
@@ -14,19 +15,19 @@
     "Number of Reports",
     "First Occurance",
   ];
-  let fields = { email: "", username: "", comment: "" };
+  let fields = { email: Anonymous, username: Anonymous, comment: "" };
   let errors = { email: "", username: "", comment: "" };
   let valid = false;
   const submitHandler = () => {
     valid = true;
     //Email field
     if (fields.email.trim().length == 0) {
-      fields.email = "Anonymous";
+      fields.email = Anonymous;
     }
 
     //username field
     if (fields.username.trim().length == 0) {
-      fields.username = "Anonymous";
+      fields.username = Anonymous;
     }
 
     //Comments field
