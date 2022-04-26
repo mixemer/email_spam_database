@@ -80,7 +80,7 @@
         toast.show()
         successSound.play()
         
-        fields = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
+        fields = { nameVar: Anonymous, email: Anonymous, scam_email: '', type_of_scam: '', info: '', }
     }
 
 </script>

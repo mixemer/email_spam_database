@@ -106,7 +106,7 @@
                     <td>{result.type_of_scam}</td>
                     <td>{result.report_count}</td>
                     <td>{result.first}</td>
-                    <td>{result.comments}</td>
+                    <td>{result.commentLog.length}</td>
                     <td> <i class="fa-solid fa-angle-right"></i> </td>
                 </tr>
                 {/each}
