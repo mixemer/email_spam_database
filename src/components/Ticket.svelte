@@ -10,6 +10,11 @@
     var successSound = new Audio(sounds.success)
     var errorSound = new Audio(sounds.error)
 
+    const validateEmail = (email) => {
+        return email.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
     const submitHandler = () => {
         valid = true;
 
@@ -34,7 +39,12 @@
             valid = false;
             errors.scam_email = 'Scam email must be at least 4 characters long!';
         } else {
-            errors.scam_email = '';
+            if (!validateEmail(fields.scam_email.trim())) {
+                errors.scam_email = 'Please put a valid email adress!';
+                valid = false;
+            } else {
+                errors.scam_email = '';
+            }
         }
 
         //Type of scam field
@@ -198,5 +208,8 @@
         margin-bottom: 10px;
         margin-left: 31%;
         width: 225px;
+    }
+    .error {
+        color: red;
     }
 </style>
