@@ -72,7 +72,7 @@
             }
         }
         //If the scam email is not reported
-        const newData = { id: data.length + 1, email: fields.scam_email, type_of_scam: scam_types[fields.type_of_scam].scam_name, report_count: "1", first: "2022", comments: "0" };
+        const newData = { id: data.length + 1, email: fields.scam_email, type_of_scam: scam_types[fields.type_of_scam].scam_name, report_count: "1", first: "2022", commentLog: [] };
         data.push(newData);
 
         var toastLiveExample = document.getElementById('liveToastSuccess')
