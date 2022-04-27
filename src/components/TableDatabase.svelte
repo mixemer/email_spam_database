@@ -64,7 +64,6 @@
         current_page = page_number
     }
     function onClickEmail(id) {
-        console.log(id)
         navigate("/"+router_names.email+"/"+id, {replace: false, state: {id: id}});
     }
     function isClickable(i) {
