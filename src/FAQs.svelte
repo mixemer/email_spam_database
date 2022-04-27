@@ -8,6 +8,7 @@
 	<Header current="{router_names.FAQs}" />
 	<h1 id="FAQHeader">Frequently Asked Questions</h1>
 	<FAQs/>
+	
 </div>
 
 <style>
