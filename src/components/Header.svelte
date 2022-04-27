@@ -1,11 +1,15 @@
 <script>
 	import { navigate, Link } from "svelte-routing";
 	import { router_names } from "../globals"
+	import { data } from "../dummy_data";
 
 	import Toast from "./Toast.svelte"
     export let search_email = '';
 
 	export let current = "";
+	const shownDataCount = 5;
+	$: shownData = data.filter(thing => thing.email.toLowerCase().startsWith(search_email.trim().toLowerCase())).slice(0, shownDataCount);
+	$: showDropdown = search_email.trim().length > 0 && (current !== router_names.home);
 
 	let onClick = () => {
 		if (search_email.trim() === "") {
@@ -19,6 +23,11 @@
 			navigate("/"+router_names.home, {replace: true, state: {search: search_email}});
 		}
 	}
+
+	//TODO: few issues
+	function onClickEmail(id) {
+        navigate("/"+router_names.email+"/"+id, {replace: false, state: {id: id}});
+    }
 </script>
 
 <div class="header">
@@ -57,9 +66,17 @@
 
 	  <div class="container-fluid">
 		<form class="d-flex">
-		  <input class="form-control me-2" type="search" placeholder="Search Email" aria-label="Search" bind:value={search_email}>
+		  <input class="form-control me-2" type="search" placeholder="Search Email" aria-label="Search" on:input={() => console.log()} bind:value={search_email}>
 		  <button class="btn btn-outline-success" type="submit" id="liveToastBtn" on:click|preventDefault={onClick}>Search</button>
 		</form>
+
+		<ul class="dropdown-menu  {showDropdown ? "show" : ""}">
+			{#each shownData as scam}
+				<li on:click={() => onClickEmail(scam.id)} ><p class="dropdown-item" >{scam.email}</p></li>
+			{:else}
+				<li><p class="dropdown-item">No Match Found</p></li>
+			{/each}
+		</ul>
 	  </div>
 
 	  <!-- Toasts -->
@@ -74,10 +91,16 @@
 }
 .header {
     padding: 0 2rem;
-	/* background-color: #2b6777;
-	color: white; */
 }
-
+p {
+	margin-bottom: 0;
+}
+.dropdown-menu {
+	width: 500px;
+}
+.dropdown-item {
+	cursor:default;
+}
 @media (max-width: 978px) {
     .header {
       padding:0;
