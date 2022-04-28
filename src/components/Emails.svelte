@@ -108,7 +108,7 @@
     </tbody>
   </table>
   <h4>Comments</h4>
-  <div id="com_container" class="overflow-scroll card sticky-top">
+  <div id="com_container" class="card sticky-top">
     {#each commentData as comment (comment.id)}
       <div in:fade >
         <div><span class="btn btn-primary" >{comment.username}</span></div>
@@ -231,6 +231,7 @@
     width: 1000px;
     margin-bottom: 10px;
     margin-top: 5px;
+    overflow-x: hidden;
   }
   .formContainer {
     display: inline-flex;
