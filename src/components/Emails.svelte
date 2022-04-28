@@ -21,7 +21,7 @@
     "Number of Reports",
     "First Occurance",
   ];
-  let fields = { email: Anonymous, username: Anonymous, comment: "" };
+  let fields = { email: "", username: "", comment: "" };
   let errors = { email: "", username: "", comment: "" };
   let valid = false;
   const submitHandler = () => {
@@ -73,8 +73,8 @@
       successSound.play();
 
       fields = {
-        email: Anonymous,
-        username: Anonymous,
+        email: "",
+        username: "",
         comment: "",
       };
     }
