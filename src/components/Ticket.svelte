@@ -3,7 +3,7 @@
     import { scam_types, sounds, Anonymous } from "../globals";
     import Toast from "./Toast.svelte"
 
-    let fields = { nameVar: Anonymous, email: Anonymous, scam_email: '', type_of_scam: '', info: '', }
+    let fields = { nameVar: "", email: "", scam_email: '', type_of_scam: '', info: '', }
     let errors = { nameVar: '', email: '', scam_email: '', type_of_scam: '', info: '', }
     let valid = false;
 
@@ -19,20 +19,22 @@
         valid = true;
 
         //Name field
-        if (fields.nameVar.trim().length == 0) {
-            valid = false;
-            errors.nameVar = 'Name cannot be empty!';
-        } else {
-            errors.nameVar = '';
-        }
+        // if (fields.nameVar.trim().length == 0) {
+        //     fields.nameVar = Anonymous;
+        //     // valid = false;
+        //     // errors.nameVar = 'Name cannot be empty!';
+        // } else {
+        //     errors.nameVar = '';
+        // }
 
-        //Email field
-        if (fields.email.trim().length < 4) {
-            valid = false;
-            errors.email = 'Email must be at least 4 characters long!';
-        } else {
-            errors.email = '';
-        }
+        // //Email field
+        // if (fields.email.trim().length < 4) {
+        //     fields.email = Anonymous;
+        //     // valid = false;
+        //     // errors.email = 'Email must be at least 4 characters long!';
+        // } else {
+        //     errors.email = '';
+        // }
 
         //Scam email field
         if (fields.scam_email.trim().length < 4) {
@@ -64,6 +66,13 @@
 
 
     function submitFields() {
+        if (fields.nameVar.trim().length == 0) {
+            fields.nameVar = Anonymous;
+        }
+        if (fields.email.trim().length < 4) {
+            fields.email = Anonymous;
+        }
+
         for(let i = 0; i < data.length; i++) {
             //If the scam email is already reported
             if(fields.scam_email == data[i].email && scam_types[fields.type_of_scam].scam_name == data[i].type_of_scam) {
@@ -84,7 +93,7 @@
         toast.show()
         successSound.play()
         
-        fields = { nameVar: Anonymous, email: Anonymous, scam_email: '', type_of_scam: '', info: '', }
+        fields = { nameVar: "", email: "", scam_email: '', type_of_scam: '', info: '', }
     }
 
 </script>
