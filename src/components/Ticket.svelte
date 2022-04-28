@@ -68,6 +68,10 @@
             //If the scam email is already reported
             if(fields.scam_email == data[i].email && scam_types[fields.type_of_scam].scam_name == data[i].type_of_scam) {
                 data[i].report_count++;
+                var toastLiveExample = document.getElementById('liveToastSuccess')
+                var toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+                successSound.play()
                 return;
             }
         }

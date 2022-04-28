@@ -2923,7 +2923,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (36:4) <Link class="navbar-brand fs-1 text-decoration-none" to="{router_names.home}" on:click={() => current = router_names.home}>
+    // (37:4) <Link class="navbar-brand fs-1 text-decoration-none" to="{router_names.home}" on:click={() => current = router_names.home}>
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -2943,14 +2943,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(36:4) <Link class=\\\"navbar-brand fs-1 text-decoration-none\\\" to=\\\"{router_names.home}\\\" on:click={() => current = router_names.home}>",
+    		source: "(37:4) <Link class=\\\"navbar-brand fs-1 text-decoration-none\\\" to=\\\"{router_names.home}\\\" on:click={() => current = router_names.home}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:5) <Link class="nav-link {current === router_names.home ? 'active' : ''}"        to="{router_names.home}" replace="{true}"  state={{search: ''}} on:click={() => current = router_names.home}>
+    // (47:5) <Link class="nav-link {current === router_names.home ? 'active' : ''}"        to="{router_names.home}" replace="{true}"  state={{search: ''}} on:click={() => current = router_names.home}>
     function create_default_slot_2$1(ctx) {
     	let t;
 
@@ -2970,14 +2970,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(46:5) <Link class=\\\"nav-link {current === router_names.home ? 'active' : ''}\\\"        to=\\\"{router_names.home}\\\" replace=\\\"{true}\\\"  state={{search: ''}} on:click={() => current = router_names.home}>",
+    		source: "(47:5) <Link class=\\\"nav-link {current === router_names.home ? 'active' : ''}\\\"        to=\\\"{router_names.home}\\\" replace=\\\"{true}\\\"  state={{search: ''}} on:click={() => current = router_names.home}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:6) <Link class="nav-link {current === router_names.report ? 'active' : ''}"         to="{router_names.report}" on:click={() => current = router_names.report}>
+    // (54:6) <Link class="nav-link {current === router_names.report ? 'active' : ''}"         to="{router_names.report}" on:click={() => current = router_names.report}>
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -2997,14 +2997,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(53:6) <Link class=\\\"nav-link {current === router_names.report ? 'active' : ''}\\\"         to=\\\"{router_names.report}\\\" on:click={() => current = router_names.report}>",
+    		source: "(54:6) <Link class=\\\"nav-link {current === router_names.report ? 'active' : ''}\\\"         to=\\\"{router_names.report}\\\" on:click={() => current = router_names.report}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:6) <Link class="nav-link {current === router_names.FAQs ? 'active' : ''}"         to="{router_names.FAQs}" on:click={() => current = router_names.FAQs}>
+    // (59:6) <Link class="nav-link {current === router_names.FAQs ? 'active' : ''}"         to="{router_names.FAQs}" on:click={() => current = router_names.FAQs}>
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -3024,14 +3024,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(58:6) <Link class=\\\"nav-link {current === router_names.FAQs ? 'active' : ''}\\\"         to=\\\"{router_names.FAQs}\\\" on:click={() => current = router_names.FAQs}>",
+    		source: "(59:6) <Link class=\\\"nav-link {current === router_names.FAQs ? 'active' : ''}\\\"         to=\\\"{router_names.FAQs}\\\" on:click={() => current = router_names.FAQs}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:3) {:else}
+    // (77:3) {:else}
     function create_else_block$1(ctx) {
     	let li;
     	let p;
@@ -3042,8 +3042,8 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "No Match Found";
     			attr_dev(p, "class", "dropdown-item svelte-7a9sjt");
-    			add_location(p, file$a, 76, 8, 3112);
-    			add_location(li, file$a, 76, 4, 3108);
+    			add_location(p, file$a, 77, 8, 3134);
+    			add_location(li, file$a, 77, 4, 3130);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -3059,14 +3059,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(76:3) {:else}",
+    		source: "(77:3) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (74:3) {#each shownData as scam}
+    // (75:3) {#each shownData as scam}
     function create_each_block$3(ctx) {
     	let li;
     	let p;
@@ -3085,8 +3085,8 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "dropdown-item svelte-7a9sjt");
-    			add_location(p, file$a, 74, 48, 3043);
-    			add_location(li, file$a, 74, 4, 2999);
+    			add_location(p, file$a, 75, 48, 3065);
+    			add_location(li, file$a, 75, 4, 3021);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -3113,7 +3113,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(74:3) {#each shownData as scam}",
+    		source: "(75:3) {#each shownData as scam}",
     		ctx
     	});
 
@@ -3272,7 +3272,7 @@ var app = (function () {
     			t9 = space();
     			br = element("br");
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file$a, 38, 3, 1467);
+    			add_location(span, file$a, 39, 3, 1489);
     			attr_dev(button0, "class", "navbar-toggler");
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "data-bs-toggle", "collapse");
@@ -3280,40 +3280,40 @@ var app = (function () {
     			attr_dev(button0, "aria-controls", "navbarNav");
     			attr_dev(button0, "aria-expanded", "false");
     			attr_dev(button0, "aria-label", "Toggle navigation");
-    			add_location(button0, file$a, 37, 10, 1284);
+    			add_location(button0, file$a, 38, 10, 1306);
     			attr_dev(li0, "class", "nav-item");
-    			add_location(li0, file$a, 44, 4, 1649);
+    			add_location(li0, file$a, 45, 4, 1671);
     			attr_dev(li1, "class", "nav-item");
-    			add_location(li1, file$a, 51, 4, 2070);
+    			add_location(li1, file$a, 52, 4, 2092);
     			attr_dev(li2, "class", "nav-item d-flex");
-    			add_location(li2, file$a, 56, 4, 2292);
+    			add_location(li2, file$a, 57, 4, 2314);
     			attr_dev(ul0, "class", "navbar-nav mb-2 mb-lg-0");
-    			add_location(ul0, file$a, 42, 3, 1601);
+    			add_location(ul0, file$a, 43, 3, 1623);
     			attr_dev(div0, "class", "end-lined collapse navbar-collapse svelte-7a9sjt");
     			attr_dev(div0, "id", "navbarNav");
-    			add_location(div0, file$a, 41, 4, 1533);
+    			add_location(div0, file$a, 42, 4, 1555);
     			attr_dev(div1, "class", "container-fluid");
-    			add_location(div1, file$a, 34, 2, 1087);
+    			add_location(div1, file$a, 35, 2, 1109);
     			attr_dev(nav, "class", "navbar navbar-expand-lg navbar-light ");
-    			add_location(nav, file$a, 33, 1, 1032);
+    			add_location(nav, file$a, 34, 1, 1054);
     			attr_dev(input, "class", "form-control me-2");
     			attr_dev(input, "type", "search");
     			attr_dev(input, "placeholder", "Search Email");
     			attr_dev(input, "aria-label", "Search");
-    			add_location(input, file$a, 68, 4, 2612);
+    			add_location(input, file$a, 69, 4, 2634);
     			attr_dev(button1, "class", "btn btn-outline-success");
     			attr_dev(button1, "type", "submit");
     			attr_dev(button1, "id", "liveToastBtn");
-    			add_location(button1, file$a, 69, 4, 2769);
+    			add_location(button1, file$a, 70, 4, 2791);
     			attr_dev(form, "class", "d-flex");
-    			add_location(form, file$a, 67, 2, 2585);
+    			add_location(form, file$a, 68, 2, 2607);
     			attr_dev(ul1, "class", ul1_class_value = "dropdown-menu " + (/*showDropdown*/ ctx[2] ? "show" : "") + " svelte-7a9sjt");
-    			add_location(ul1, file$a, 72, 2, 2907);
+    			add_location(ul1, file$a, 73, 2, 2929);
     			attr_dev(div2, "class", "container-fluid");
-    			add_location(div2, file$a, 66, 3, 2552);
-    			add_location(br, file$a, 84, 3, 3277);
+    			add_location(div2, file$a, 67, 3, 2574);
+    			add_location(br, file$a, 85, 3, 3299);
     			attr_dev(div3, "class", "header svelte-7a9sjt");
-    			add_location(div3, file$a, 32, 0, 1009);
+    			add_location(div3, file$a, 33, 0, 1031);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3521,6 +3521,7 @@ var app = (function () {
     	//TODO: few issues
     	function onClickEmail(id) {
     		navigate("/" + router_names.email + "/" + id, { replace: false, state: { id } });
+    		location.reload();
     	}
 
     	const writable_props = ['search_email', 'current'];
@@ -3684,10 +3685,10 @@ var app = (function () {
     			attr_dev(div0, "aria-valuemin", "0");
     			attr_dev(div0, "aria-valuemax", "100");
     			set_style(div0, "width", "100%");
-    			add_location(div0, file$9, 76, 12, 2612);
+    			add_location(div0, file$9, 76, 12, 2648);
     			attr_dev(div1, "class", "progress");
-    			add_location(div1, file$9, 75, 8, 2576);
-    			add_location(br, file$9, 78, 8, 2810);
+    			add_location(div1, file$9, 75, 8, 2612);
+    			add_location(br, file$9, 78, 8, 2846);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3770,7 +3771,7 @@ var app = (function () {
     		c: function create() {
     			i = element("i");
     			attr_dev(i, "class", "fa-solid fa-arrow-up");
-    			add_location(i, file$9, 90, 28, 3292);
+    			add_location(i, file$9, 90, 28, 3328);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -3799,7 +3800,7 @@ var app = (function () {
     		c: function create() {
     			i = element("i");
     			attr_dev(i, "class", "fa-solid fa-arrow-down");
-    			add_location(i, file$9, 88, 28, 3191);
+    			add_location(i, file$9, 88, 28, 3227);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -3844,7 +3845,7 @@ var app = (function () {
     			t2 = space();
     			attr_dev(th, "class", "" + (null_to_empty(isClickable(/*i*/ ctx[26]) ? "clickable" : "") + " svelte-xwpvo"));
     			attr_dev(th, "scope", "col");
-    			add_location(th, file$9, 85, 18, 2975);
+    			add_location(th, file$9, 85, 18, 3011);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, th, anchor);
@@ -4022,17 +4023,17 @@ var app = (function () {
     			td6 = element("td");
     			i_1 = element("i");
     			t12 = space();
-    			add_location(td0, file$9, 102, 20, 3684);
-    			add_location(td1, file$9, 103, 20, 3720);
-    			add_location(td2, file$9, 104, 20, 3765);
-    			add_location(td3, file$9, 105, 20, 3817);
-    			add_location(td4, file$9, 106, 20, 3869);
-    			add_location(td5, file$9, 107, 20, 3914);
+    			add_location(td0, file$9, 102, 20, 3720);
+    			add_location(td1, file$9, 103, 20, 3756);
+    			add_location(td2, file$9, 104, 20, 3801);
+    			add_location(td3, file$9, 105, 20, 3853);
+    			add_location(td4, file$9, 106, 20, 3905);
+    			add_location(td5, file$9, 107, 20, 3950);
     			attr_dev(i_1, "class", "fa-solid fa-angle-right");
-    			add_location(i_1, file$9, 108, 25, 3976);
-    			add_location(td6, file$9, 108, 20, 3971);
+    			add_location(i_1, file$9, 108, 25, 4012);
+    			add_location(td6, file$9, 108, 20, 4007);
     			attr_dev(tr, "class", "clickable svelte-xwpvo");
-    			add_location(tr, file$9, 101, 16, 3591);
+    			add_location(tr, file$9, 101, 16, 3627);
     			this.first = tr;
     		},
     		m: function mount(target, anchor) {
@@ -4109,7 +4110,7 @@ var app = (function () {
     			h1 = element("h1");
     			h1.textContent = "No Email Found";
     			attr_dev(h1, "class", "text-center text-white");
-    			add_location(h1, file$9, 116, 10, 4170);
+    			add_location(h1, file$9, 116, 10, 4206);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -4150,13 +4151,13 @@ var app = (function () {
     			span = element("span");
     			t = text(t_value);
     			attr_dev(span, "class", "page-link svelte-xwpvo");
-    			add_location(span, file$9, 126, 80, 4731);
+    			add_location(span, file$9, 126, 80, 4767);
 
     			attr_dev(li, "class", li_class_value = "page-item " + (/*i*/ ctx[26] + 1 == /*current_page*/ ctx[1]
     			? 'active'
     			: ''));
 
-    			add_location(li, file$9, 126, 20, 4671);
+    			add_location(li, file$9, 126, 20, 4707);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -4286,45 +4287,45 @@ var app = (function () {
     			option2 = element("option");
     			option2.textContent = "20";
     			attr_dev(tr, "class", "svelte-xwpvo");
-    			add_location(tr, file$9, 83, 10, 2902);
-    			add_location(thead, file$9, 82, 8, 2883);
-    			add_location(tbody, file$9, 98, 8, 3480);
+    			add_location(tr, file$9, 83, 10, 2938);
+    			add_location(thead, file$9, 82, 8, 2919);
+    			add_location(tbody, file$9, 98, 8, 3516);
     			attr_dev(table, "class", "table table-bordered svelte-xwpvo");
-    			add_location(table, file$9, 81, 4, 2837);
+    			add_location(table, file$9, 81, 4, 2873);
     			attr_dev(span0, "class", "page-link svelte-xwpvo");
-    			add_location(span0, file$9, 122, 76, 4474);
+    			add_location(span0, file$9, 122, 76, 4510);
     			attr_dev(li0, "class", li0_class_value = "page-item " + (/*current_page*/ ctx[1] <= 1 ? 'disabled' : ''));
-    			add_location(li0, file$9, 122, 16, 4414);
+    			add_location(li0, file$9, 122, 16, 4450);
     			attr_dev(span1, "class", "page-link svelte-xwpvo");
-    			add_location(span1, file$9, 130, 85, 4948);
+    			add_location(span1, file$9, 130, 85, 4984);
 
     			attr_dev(li1, "class", li1_class_value = "page-item " + (/*current_page*/ ctx[1] >= /*max_page_count*/ ctx[5]
     			? 'disabled'
     			: ''));
 
-    			add_location(li1, file$9, 130, 12, 4875);
+    			add_location(li1, file$9, 130, 12, 4911);
     			attr_dev(ul, "class", "pagination pagination-sm");
-    			add_location(ul, file$9, 121, 12, 4359);
+    			add_location(ul, file$9, 121, 12, 4395);
     			attr_dev(nav, "aria-label", "Page navigation example");
-    			add_location(nav, file$9, 120, 8, 4303);
+    			add_location(nav, file$9, 120, 8, 4339);
     			option0.selected = true;
     			option0.__value = 5;
     			option0.value = option0.__value;
-    			add_location(option0, file$9, 136, 12, 5226);
+    			add_location(option0, file$9, 136, 12, 5262);
     			option1.__value = 10;
     			option1.value = option1.__value;
-    			add_location(option1, file$9, 137, 12, 5277);
+    			add_location(option1, file$9, 137, 12, 5313);
     			option2.__value = 20;
     			option2.value = option2.__value;
-    			add_location(option2, file$9, 138, 12, 5321);
+    			add_location(option2, file$9, 138, 12, 5357);
     			attr_dev(select, "class", "form-select svelte-xwpvo");
     			attr_dev(select, "aria-label", "Default select example");
     			if (/*shown_rows*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[21].call(select));
-    			add_location(select, file$9, 135, 8, 5084);
+    			add_location(select, file$9, 135, 8, 5120);
     			attr_dev(div0, "class", "d-flex justify-content-between");
-    			add_location(div0, file$9, 119, 6, 4249);
+    			add_location(div0, file$9, 119, 6, 4285);
     			attr_dev(div1, "class", "body p-3 rounded svelte-xwpvo");
-    			add_location(div1, file$9, 73, 2, 2517);
+    			add_location(div1, file$9, 73, 2, 2553);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4571,8 +4572,8 @@ var app = (function () {
     		} else {
     			// comments
     			return sortAsc
-    			? a.comments - b.comments
-    			: b.comments - a.comments;
+    			? a.commentLog.length - b.commentLog.length
+    			: b.commentLog.length - a.commentLog.length;
     		}
     	}
 
@@ -4982,7 +4983,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (109:20) {#each scam_types as { scam_name }
+    // (113:20) {#each scam_types as { scam_name }
     function create_each_block$1(ctx) {
     	let option;
     	let t_value = /*scam_name*/ ctx[13] + "";
@@ -4994,7 +4995,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = /*i*/ ctx[15];
     			option.value = option.__value;
-    			add_location(option, file$7, 109, 24, 4139);
+    			add_location(option, file$7, 113, 24, 4357);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -5010,7 +5011,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(109:20) {#each scam_types as { scam_name }",
+    		source: "(113:20) {#each scam_types as { scam_name }",
     		ctx
     	});
 
@@ -5137,64 +5138,64 @@ var app = (function () {
     			create_component(toast.$$.fragment);
     			attr_dev(h1, "id", "header");
     			attr_dev(h1, "class", "svelte-1lk1nze");
-    			add_location(h1, file$7, 88, 4, 3037);
+    			add_location(h1, file$7, 92, 4, 3255);
     			attr_dev(p0, "id", "info");
     			attr_dev(p0, "class", "svelte-1lk1nze");
-    			add_location(p0, file$7, 90, 8, 3154);
+    			add_location(p0, file$7, 94, 8, 3372);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "id", "name-input");
     			attr_dev(input0, "class", "svelte-1lk1nze");
-    			add_location(input0, file$7, 92, 12, 3231);
+    			add_location(input0, file$7, 96, 12, 3449);
     			attr_dev(div0, "id", "name");
     			attr_dev(div0, "class", "svelte-1lk1nze");
-    			add_location(div0, file$7, 91, 8, 3197);
+    			add_location(div0, file$7, 95, 8, 3415);
     			attr_dev(div1, "class", "error svelte-1lk1nze");
-    			add_location(div1, file$7, 94, 8, 3320);
+    			add_location(div1, file$7, 98, 8, 3538);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "id", "email-input");
     			attr_dev(input1, "class", "svelte-1lk1nze");
-    			add_location(input1, file$7, 96, 12, 3409);
+    			add_location(input1, file$7, 100, 12, 3627);
     			attr_dev(div2, "id", "email");
     			attr_dev(div2, "class", "svelte-1lk1nze");
-    			add_location(div2, file$7, 95, 8, 3373);
+    			add_location(div2, file$7, 99, 8, 3591);
     			attr_dev(div3, "class", "error svelte-1lk1nze");
-    			add_location(div3, file$7, 98, 8, 3497);
+    			add_location(div3, file$7, 102, 8, 3715);
     			attr_dev(p1, "id", "scam-info");
     			attr_dev(p1, "class", "svelte-1lk1nze");
-    			add_location(p1, file$7, 99, 8, 3548);
+    			add_location(p1, file$7, 103, 8, 3766);
     			attr_dev(input2, "type", "text");
     			attr_dev(input2, "id", "scam-email-input");
     			attr_dev(input2, "class", "svelte-1lk1nze");
-    			add_location(input2, file$7, 101, 12, 3643);
+    			add_location(input2, file$7, 105, 12, 3861);
     			attr_dev(div4, "id", "scam-email");
     			attr_dev(div4, "class", "svelte-1lk1nze");
-    			add_location(div4, file$7, 100, 8, 3597);
+    			add_location(div4, file$7, 104, 8, 3815);
     			attr_dev(div5, "class", "error svelte-1lk1nze");
-    			add_location(div5, file$7, 103, 8, 3741);
+    			add_location(div5, file$7, 107, 8, 3959);
     			option.selected = true;
     			option.__value = "Pick the type of scam";
     			option.value = option.__value;
-    			add_location(option, file$7, 107, 20, 4006);
+    			add_location(option, file$7, 111, 20, 4224);
     			attr_dev(select, "class", "select-picker svelte-1lk1nze");
     			attr_dev(select, "aria-label", "Default select example");
     			if (/*fields*/ ctx[0].type_of_scam === void 0) add_render_callback(() => /*select_change_handler*/ ctx[6].call(select));
-    			add_location(select, file$7, 106, 16, 3885);
+    			add_location(select, file$7, 110, 16, 4103);
     			attr_dev(div6, "id", "type-container");
     			attr_dev(div6, "class", "svelte-1lk1nze");
-    			add_location(div6, file$7, 105, 12, 3842);
+    			add_location(div6, file$7, 109, 12, 4060);
     			attr_dev(div7, "id", "scam-type");
     			attr_dev(div7, "class", "svelte-1lk1nze");
-    			add_location(div7, file$7, 104, 8, 3797);
+    			add_location(div7, file$7, 108, 8, 4015);
     			attr_dev(div8, "class", "error svelte-1lk1nze");
-    			add_location(div8, file$7, 114, 8, 4281);
+    			add_location(div8, file$7, 118, 8, 4499);
     			attr_dev(button, "class", "btn btn-success svelte-1lk1nze");
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$7, 115, 8, 4339);
+    			add_location(button, file$7, 119, 8, 4557);
     			attr_dev(form, "id", "input-area");
     			attr_dev(form, "class", "svelte-1lk1nze");
-    			add_location(form, file$7, 89, 4, 3081);
+    			add_location(form, file$7, 93, 4, 3299);
     			attr_dev(div9, "class", "body svelte-1lk1nze");
-    			add_location(div9, file$7, 87, 0, 3013);
+    			add_location(div9, file$7, 91, 0, 3231);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5422,6 +5423,10 @@ var app = (function () {
     			//If the scam email is already reported
     			if (fields.scam_email == data[i].email && scam_types[fields.type_of_scam].scam_name == data[i].type_of_scam) {
     				data[i].report_count++;
+    				var toastLiveExample = document.getElementById('liveToastSuccess');
+    				var toast = new bootstrap.Toast(toastLiveExample);
+    				toast.show();
+    				successSound.play();
     				return;
     			}
     		}
@@ -7833,7 +7838,7 @@ var app = (function () {
     			create_component(route3.$$.fragment);
     			t3 = space();
     			create_component(route4.$$.fragment);
-    			add_location(div, file, 18, 1, 502);
+    			add_location(div, file, 18, 1, 501);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -7965,7 +7970,7 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
     	let hereFirstTime = true;
-    	let { url = "/" } = $$props;
+    	let { url = "" } = $$props;
     	console.log(window.location.href);
     	const writable_props = ['url'];
 
