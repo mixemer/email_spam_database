@@ -27,6 +27,7 @@
 	//TODO: few issues
 	function onClickEmail(id) {
         navigate("/"+router_names.email+"/"+id, {replace: false, state: {id: id}});
+		location.reload();
     }
 </script>
 

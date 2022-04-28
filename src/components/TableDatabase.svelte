@@ -40,7 +40,7 @@
         } else if (sortVal == firstIndex) { // first
             return sortAsc ? a.first - b.first : b.first - a.first;
         } else { // comments
-            return sortAsc ? a.comments - b.comments : b.comments - a.comments;
+            return sortAsc ? a.commentLog.length - b.commentLog.length : b.commentLog.length - a.commentLog.length;
         }
     }
 
