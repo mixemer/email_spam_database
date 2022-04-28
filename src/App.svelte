@@ -11,7 +11,7 @@
 	let hereFirstTime = true
 
 	// TODO: make it "" later, for now "/" works for github pages
-	export let url = "/";
+	export let url = "";
 	console.log(window.location.href)
 </script>
 
