@@ -52,7 +52,9 @@
   
 				<li class="nav-item">
 				  <Link class="nav-link {current === router_names.report ? 'active' : ''}" 
-				  to="{router_names.report}" on:click={() => current = router_names.report}>Report</Link>
+				  to="{router_names.report}" on:click={() => current = router_names.report}>
+				  <p>Report</p>
+				</Link>
 				</li>
 			   
 				<li class="nav-item d-flex">
@@ -66,9 +68,9 @@
 
 
 	  <div class="container-fluid">
-		<form class="d-flex">
+		<form class="d-flex" style="position: relative;">
 		  <input class="form-control me-2" type="search" placeholder="Search Email" aria-label="Search" on:input={() => console.log()} bind:value={search_email}>
-		  <button class="btn btn-outline-success" type="submit" id="liveToastBtn" on:click|preventDefault={onClick}>Search</button>
+		  <button class="btn btn-outline-success" type="submit" id="liveToastBtn" style="font-size: large" on:click|preventDefault={onClick}>Search</button>
 		</form>
 
 		<ul class="dropdown-menu  {showDropdown ? "show" : ""}">
@@ -108,4 +110,23 @@ p {
       margin:0;
     }
 }
+.nav-item {
+	font-size: x-large;
+	margin-left: 5vh;
+	border-radius: 4px;
+	border: 1px solid rgb(255, 255, 255);
+}
+.nav-item:hover {
+	border: 1px solid rgba(0, 0, 0, 0.253);
+	text-decoration: none !important;
+}
+.form-control {
+	font-size: large;
+	margin: 0;
+	border-color: black;
+	/*width: 50vh;
+	/*position: absolute;
+	right: 0;*/
+}
+
 </style>

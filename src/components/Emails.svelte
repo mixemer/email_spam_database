@@ -49,6 +49,7 @@
       warningSound.play();
     }
   };
+
   function submitFields() {
     
       //If the scam email is not reported
@@ -77,8 +78,18 @@
         username: "",
         comment: "",
       };
-    }
+  };
   
+  // Increase the Number of Reports by 1 when "+ Report" button is pressed. It only works one time per email.
+  var disabledButton = false;
+  function addReport() {
+    if (!disabledButton) {
+      var num = parseInt(emailData.report_count);
+      num += 1;
+      emailData.report_count = num;
+      disabledButton = true;
+    }
+  };
 </script>
 
 <div class="body">
@@ -96,6 +107,7 @@
         <th>{emailData.type_of_scam}</th>
         <th>{emailData.report_count}</th>
         <th>{emailData.first}</th>
+        <!--
         <Link
           class="navbar-brand fs-1 text-decoration-none"
           to={router_names.report}
@@ -103,7 +115,9 @@
           <button class="btn btn-success" type="submit">
             + Report
           </button></Link
-        >
+        > -->
+        <button on:click={addReport} class="btn btn-success" id="reporter" disabled={disabledButton}>
+          + Report</button>
       </tr>
     </tbody>
   </table>
@@ -171,6 +185,7 @@
     background-color: #2b6777;
     color: white;
     font-size: 16px;
+    overflow: auto;
   }
   h4 {
     position: relative;

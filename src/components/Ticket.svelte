@@ -85,7 +85,13 @@
             }
         }
         //If the scam email is not reported
-        const newData = { id: data.length + 1, email: fields.scam_email, type_of_scam: scam_types[fields.type_of_scam].scam_name, report_count: "1", first: "2022", commentLog: [] };
+        //Formating the date, ex.: 05/09/2022
+        var todate = new Date();
+        let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(todate);
+        let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(todate);
+        let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(todate);
+        // Adding the new scan email
+        const newData = { id: data.length + 1, email: fields.scam_email, type_of_scam: scam_types[fields.type_of_scam].scam_name, report_count: "1", first: `${mo}/${da}/${ye}` , commentLog: [] };
         data.push(newData);
 
         var toastLiveExample = document.getElementById('liveToastSuccess')

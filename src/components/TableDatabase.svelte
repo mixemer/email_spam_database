@@ -29,23 +29,41 @@
 
 	const column_names = ["#", "Email", "Type of Scam", "Number of Reports", "First Occurance", "Comments", ""]
 
+    const emailIndex = 1
+    const typeIndex = 2
     const reportsIndex = 3
     const firstIndex = 4
     const commentsIndex = 5
     let sortAsc = false;
-    let sortVal = reportsIndex;
+    let sortVal = null;
     function sort(a, b) {
-        if (sortVal == reportsIndex) { // report_count
+        if (sortVal == emailIndex) {
+            if (sortAsc) {
+                return a.email > b.email ? 1 : b.email > a.email ? -1 : 0;
+            } else {
+                return b.email > a.email ? 1 : a.email > b.email ? -1 : 0;
+            }
+        } else if (sortVal == typeIndex) {
+            if (sortAsc) {
+                return a.type_of_scam > b.type_of_scam ? 1 : b.type_of_scam > a.type_of_scam ? -1 : 0;
+            } else {
+                return b.type_of_scam > a.type_of_scam ? 1 : a.type_of_scam > b.type_of_scam ? -1 : 0;
+            }
+        } else if (sortVal == reportsIndex) { // report_count
             return sortAsc ? a.report_count - b.report_count : b.report_count - a.report_count;
         } else if (sortVal == firstIndex) { // first
-            return sortAsc ? a.first - b.first : b.first - a.first;
+            if (sortAsc) {
+                
+                return new Date(a.first) > new Date(b.first) ? 1 : new Date(b.first) > new Date(a.first) ? -1 : 0;
+            } else {
+                return new Date(b.first) > new Date(a.first) ? 1 : new Date(a.first) > new Data(b.first) ? -1 : 0;
+            }
         } else { // comments
             return sortAsc ? a.commentLog.length - b.commentLog.length : b.commentLog.length - a.commentLog.length;
         }
     }
 
     function onClickColumNames(index) {
-        if (index < reportsIndex || index > commentsIndex) return;
         if (index == sortVal) sortAsc = !sortAsc
         sortVal = index;
         filtered_data = filtered_data.sort(sort)
@@ -67,11 +85,11 @@
         navigate("/"+router_names.email+"/"+id, {replace: false, state: {id: id}});
     }
     function isClickable(i) {
-        return i >= reportsIndex && i <=commentsIndex
+        return i >= emailIndex && i <=commentsIndex
     }
 </script>
 
-  <div class="body p-3 rounded">
+<div class="body p-2 rounded">
     {#if loading}
         <div class="progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
@@ -138,13 +156,14 @@
             <option value={10}>10</option>
             <option value={20}>20</option>
         </select>
-      </div>
+    </div>
 </div>
 
 <style>
 .body {
     padding: 0 3rem;
     background-color: #2b6777;
+    overflow: visible;
 }
 table {
     color: white;
