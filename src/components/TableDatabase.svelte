@@ -82,7 +82,7 @@
         current_page = page_number
     }
     function onClickEmail(id) {
-        navigate("/"+router_names.email+"/"+id, {replace: false, state: {id: id}});
+        navigate(""+router_names.email+"/"+id, {replace: false, state: {id: id}});
     }
     function isClickable(i) {
         return i >= emailIndex && i <=commentsIndex
