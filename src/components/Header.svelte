@@ -69,7 +69,7 @@
 
 	  <div class="container-fluid">
 		<form class="d-flex" style="position: relative;">
-		  <input class="form-control me-2" type="search" placeholder="Search Email" aria-label="Search" on:input={() => console.log()} bind:value={search_email}>
+		  <input class="form-control me-2 shadow" type="search" placeholder="Search Email" aria-label="Search" on:input={() => console.log()} bind:value={search_email}>
 		  <button class="btn btn-outline-success" type="submit" id="liveToastBtn" style="font-size: large" on:click|preventDefault={onClick}>Search</button>
 		</form>
 
@@ -89,6 +89,11 @@
 </div>
 
 <style>
+
+input::placeholder  {
+  font-size: 1.2em;
+}
+
 .end-lined {
 	flex-grow: 0;
 }
