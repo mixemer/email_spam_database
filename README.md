@@ -4,10 +4,6 @@
 
 Read description in PDF: https://github.com/mixemer/email_spam_database/blob/main/CISC%203650%20Group%232.pdf
 
-Github Link: https://github.com/mixemer/email_spam_database.git
-Github Page: https://mixemer.github.io/email_spam_database/
-***NOTE: We are using a framework called svelte, and even though it works with Github Pages, svelte routing gives errors on GitHub. For example, if you refresh the page it says 404 Not Found. If you open the link again, the page will work.*** 
-
 Team Breakdown for Website:
 Mehmet: Set up svelte, worked on the homepage. Including the header component, and the table database, and the 404 Not Found page.
 Lubna: Worked on the email more page. Included working on the comment 22section, displaying contents of the database, and adding comments.
